@@ -3,6 +3,11 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Vienna Christmas Getaway 2026</title>
 <meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#6B1522">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Wien 2026">
+<meta name="format-detection" content="telephone=yes">
 <meta name="description" content="Our Vienna Christmas getaway, November 23 to 29, 2026.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎄</text></svg>">
 <style>@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500..800;1,500..700&family=Jost:wght@300..600&family=Dancing+Script:wght@500..700&display=swap');
@@ -82,7 +87,7 @@ section{padding:64px 0}
 .day-date .mo{color:var(--muted);font-size:.95rem}
 .day-body h3{font-family:var(--display);font-size:1.9rem;font-weight:600;margin:0 0 4px;line-height:1.15}
 .day-body .lede{margin:0 0 18px;color:var(--muted)}
-.day-photo{aspect-ratio:21/8;background:var(--paper-2) center/cover;border-radius:2px;margin-bottom:18px}
+.day-photo{aspect-ratio:21/8;background:linear-gradient(135deg,#efe3c8,#e2cfa6 60%,#d9c295) center/cover;border-radius:2px;margin-bottom:18px}
 .stops{list-style:none;margin:0;padding:0;counter-reset:s}
 .stops li{display:grid;grid-template-columns:118px 1fr;gap:14px;padding:12px 0;border-bottom:1px dotted #cdb98e}
 .stops li:last-child{border-bottom:0}
@@ -120,7 +125,7 @@ section{padding:64px 0}
 .extras{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
 .extra{display:grid;grid-template-columns:150px 1fr;background:#fffaf0;border:1px solid #e2d2ae;text-decoration:none;color:var(--ink)}
 .extra:hover{border-color:var(--gold);color:var(--ink)}
-.extra .ph{background:var(--paper-2) center/cover;min-height:150px}
+.extra .ph{background:linear-gradient(135deg,#efe3c8,#e2cfa6) center/cover;min-height:150px}
 .extra div.tx{padding:16px 18px}
 .extra h3{font-family:var(--display);margin:0 0 4px;font-size:1.3rem;font-weight:600}
 .extra p{margin:0;color:var(--muted);font-size:.96rem}
@@ -136,7 +141,7 @@ footer .script{font-family:var(--script);font-weight:600;font-size:1.75rem;color
 
 /* Event pages */
 .ev-hero{background:var(--tanne);color:var(--paper)}
-.ev-hero .img{aspect-ratio:21/9;max-height:62vh;width:100%;background:var(--tanne-2) center/cover}
+.ev-hero .img{aspect-ratio:21/9;max-height:62vh;width:100%;background:linear-gradient(135deg,var(--tanne-2),var(--tanne) 70%) center/cover}
 .ev-hero .wrap{padding-top:26px;padding-bottom:34px}
 .crumb{font-size:.95rem;margin-bottom:12px}
 .crumb a{color:var(--gold-soft)}
@@ -194,23 +199,96 @@ footer .script{font-family:var(--script);font-weight:600;font-size:1.75rem;color
 .empty{padding:40px;text-align:center;border:1.5px dashed #cdb98e;color:var(--muted)}
 .gate{max-width:420px;margin:80px auto;text-align:center}
 
+/* ---------- Mobile first pass ---------- */
 @media (max-width:860px){
-  .grid3,.weather,.extras{grid-template-columns:1fr}
-  .ev-layout{grid-template-columns:1fr;gap:10px}
-  .aside{position:static}
-  .day{grid-template-columns:1fr;gap:6px}
-  .day-date{position:static;display:flex;align-items:baseline;gap:10px}
-  .day-date .num{font-size:3.2rem}
-  .stops li{grid-template-columns:1fr;gap:0}
-  .extra{grid-template-columns:110px 1fr}
-  section{padding:48px 0}
-  .topbar .wrap{flex-direction:column;align-items:stretch;gap:0;min-height:0;padding-top:8px}
-  .brand{font-size:1.15rem}
-  .nav{justify-content:space-between;margin:0 -8px}
-  .nav a{padding:8px 8px 10px;font-size:.92rem}
-  .day-date{top:auto}
-  .aside{order:-1}
+  html{-webkit-text-size-adjust:100%}
+  body{font-size:17px}
+  .wrap{padding:0 18px}
+
+  /* Nav wraps instead of clipping */
+  .topbar .wrap{flex-direction:column;align-items:stretch;gap:0;min-height:0;padding-top:10px;padding-bottom:2px}
+  .brand{font-size:1.1rem;padding-bottom:8px;border-bottom:1px solid rgba(234,211,165,.22)}
+  .nav{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;overflow:visible;margin:4px -4px 0}
+  .nav a{padding:11px 4px;font-size:.9rem;text-align:center;min-height:44px;display:flex;align-items:center;justify-content:center}
+
+  /* Hero: shorter, less dead space */
+  .hero .wrap{padding-top:34px;padding-bottom:30px}
+  .hero h1{font-size:clamp(3.6rem,20vw,5.4rem)}
+  .hero .script{font-size:clamp(1.9rem,8vw,2.6rem)}
+  .hero .dates{font-size:1.02rem;margin-bottom:20px}
+  .hero-links{gap:10px;margin-top:22px}
+  .hero-links .btn{flex:1 1 auto;justify-content:center;min-height:48px}
+  .countdown b{font-size:2.1rem}
+
+  section{padding:36px 0}
+  .sec-head{margin-bottom:22px}
+
+  /* Day blocks read as cards */
+  .day{grid-template-columns:1fr;gap:4px;padding:22px 0;scroll-margin-top:calc(var(--topbar-h,106px) + 62px)}
+  .day-date{position:static;display:flex;align-items:baseline;gap:9px}
+  .day-date .num{font-size:2.5rem}
+  .day-date .wd{font-size:1.05rem;font-weight:600}
+  .day-body h3{font-size:1.55rem}
+  .day-photo{aspect-ratio:16/9;margin-bottom:14px;border-radius:4px}
+
+  /* Stops: bigger taps, clearer hierarchy */
+  .stops li{grid-template-columns:1fr;gap:0;padding:14px 0}
+  .stops .when{font-size:.8rem;text-transform:uppercase;letter-spacing:.06em;margin-bottom:3px}
+  .stops a.stop,.stops .plain{font-size:1.18rem;line-height:1.3;display:inline-block;padding:2px 0}
+  .stops .note{font-size:.95rem;margin-top:4px}
+  .pill{margin-left:0;margin-top:5px;display:inline-block}
+  .mode{font-size:.87rem;margin-top:7px}
+
+  .panel{padding:20px}
+  .panel .big{font-size:2rem}
+  .btn{min-height:48px}
+  .extra{grid-template-columns:1fr}
+  .extra .ph{min-height:150px;aspect-ratio:16/9}
+  .grid3,.weather,.extras{grid-template-columns:1fr;gap:16px}
+  .cta .wrap{display:block}
+  .cta .btn{margin-top:16px;width:100%;justify-content:center}
+
+  /* Event pages: practical info first, then the story */
+  .ev-layout{grid-template-columns:1fr;gap:10px;padding:26px 0}
+  .aside{position:static;order:-1}
+  .aside .box{padding:18px}
+  .ev-hero .img{aspect-ratio:16/10;max-height:36vh}
+  .ev-hero .wrap{padding-top:20px;padding-bottom:26px}
+  .ev-hero h1{font-size:clamp(2.1rem,9vw,3rem)}
+  .ev-hero .actions{gap:9px}
+  .ev-hero .actions .btn{flex:1 1 100%;justify-content:center}
+  .story p{font-size:1.03rem}
+  .pager{flex-direction:column;gap:14px}
+  .pager a{max-width:100%}
+  .pager .next{text-align:left;margin-left:0}
+  .photo-grid{grid-template-columns:1fr 1fr;gap:8px}
+  .masonry{columns:2 140px;column-gap:8px}
+
+  .uploader{padding:14px}
+  .uploader label,.uploader input,.uploader select{min-width:0;width:100%}
+  .uploader .btn{width:100%;justify-content:center}
+  .gal-head{padding:30px 0 14px}
+  .gal-head h1{font-size:clamp(2.2rem,11vw,3.2rem)}
+  .lb-btn{width:46px;height:46px}
+  footer{padding:24px 0 34px}
+  footer .script{font-size:1.5rem}
 }
+@media (max-width:400px){
+  .nav a{font-size:.84rem;padding:11px 2px}
+  .day-date .num{font-size:2.2rem}
+}
+
+/* Day jump chips */
+.daybar{position:sticky;top:var(--topbar-h,106px);z-index:15;background:var(--paper);border-bottom:1px solid #d8c7a3;padding:9px 0;margin-bottom:6px;display:none}
+.daybar .wrap{display:flex;gap:7px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.daybar .wrap::-webkit-scrollbar{display:none}
+.daybar a{flex:0 0 auto;font-size:.86rem;padding:8px 13px;border-radius:20px;border:1px solid var(--tanne);color:var(--tanne);text-decoration:none;white-space:nowrap;min-height:38px;display:flex;align-items:center}
+.daybar a.on{background:var(--tanne);color:var(--paper)}
+@media (max-width:860px){.daybar{display:block}}
+
+/* Back to top */
+#totop{position:fixed;right:14px;bottom:14px;z-index:30;width:46px;height:46px;border-radius:50%;border:0;background:var(--tanne);color:var(--paper);font-size:1.3rem;cursor:pointer;box-shadow:0 2px 10px rgba(0,0,0,.28);display:none;align-items:center;justify-content:center}
+#totop.show{display:flex}
 
 /* Travel mode chips */
 .mode{display:flex;align-items:flex-start;gap:7px;margin-top:6px;font-size:.9rem;color:var(--wein)}
@@ -218,20 +296,20 @@ footer .script{font-family:var(--script);font-weight:600;font-size:1.75rem;color
 .aside .mode{font-size:1rem;margin:0}
 .aside .from-flat{color:var(--muted);font-size:.9rem;margin:.6em 0 0}
 </style>
-</head><body><header class="topbar"><div class="wrap"><a class="brand" href="index.html">Wien 2026</a><nav class="nav" aria-label="Main"><a href="index.html#itinerary">Itinerary</a><a href="index.html#travel">Travel</a><a href="index.html#packing">Packing</a><a href="index.html#extras">Extras</a><a href="gallery.html">Gallery</a></nav></div></header>
-<main>
+</head><body><header class="topbar"><div class="wrap"><a class="brand" href="index.html">Wien 2026</a><nav class="nav" aria-label="Main"><a href="index.html#itinerary">Itinerary</a><a href="index.html#travel">Travel</a><a href="index.html#packing">Packing</a><a href="index.html#extras">Extras</a><a href="eats.html">Eats</a><a href="gallery.html">Gallery</a></nav></div></header>
+<script>(function(){var t=document.querySelector(".topbar");if(!t)return;function set(){document.documentElement.style.setProperty("--topbar-h",t.offsetHeight+"px")}set();addEventListener("resize",set);addEventListener("orientationchange",set);if(document.fonts&&document.fonts.ready)document.fonts.ready.then(set);})();</script><main>
 <section class="hero" style="padding:0"><div class="hero-img" data-wiki="St. Stephen's Cathedral, Vienna"></div>
  <div class="wrap">
   <h1>Vienna</h1>
   <p class="script">a Christmas getaway</p>
-  <p class="dates">November 23 to 29, 2026. Four couples, one apartment, five full days of palaces, Christmas markets, Klimt and the Vienna Philharmonic.</p>
+  <p class="dates">November 23 to 29, 2026. Four couples, one apartment, five full days of palaces, Christmas markets, Klimt and a concert in a palace ballroom.</p>
   <div class="countdown" id="countdown" aria-live="polite"></div>
   <div class="hero-links"><a class="btn btn-gold" href="#itinerary">See the itinerary</a><a class="btn btn-line" href="gallery.html">Share photos</a></div>
  </div></section>
 <div class="checker gold" aria-hidden="true"></div>
 
-<section id="itinerary"><div class="wrap">
- <div class="sec-head"><h2>The week, day by day</h2><p>Tap any stop for tickets, photos and the story behind it. Every city stop is 15 to 30 minutes from the apartment on foot or by U-Bahn and tram. Only the two excursions leave Vienna.</p></div>
+<nav class="daybar" aria-label="Jump to a day"><div class="wrap"><a href="#itinerary">Week</a><a href="#day-tue">Tue 24</a><a href="#day-wed">Wed 25</a><a href="#day-thu">Thu 26</a><a href="#day-fri">Fri 27</a><a href="#day-sat">Sat 28</a><a href="#day-sun">Sun 29</a></div></nav><section id="itinerary"><div class="wrap">
+ <div class="sec-head"><h2>The week, day by day</h2><p>Tap any stop for tickets, photos and the story behind it. Every city stop is 15 to 30 minutes from the apartment on foot or by U-Bahn and tram. Only the Bratislava day leaves Vienna.</p> <p style="margin-top:10px"><a href="eats.html">Cheap eats near each day's stops</a></p></div>
  <article class="day" id="day-mon">
   <div class="day-date"><div class="wd">Monday</div><div class="num">23</div><div class="mo">November</div></div>
   <div class="day-body"><h3>Atlanta to Vienna</h3><p class="lede">Travel day. The adventure begins.</p>
@@ -242,9 +320,9 @@ footer .script{font-family:var(--script);font-weight:600;font-size:1.75rem;color
   <div class="day-photo" data-wiki="St. Stephen&#x27;s Cathedral, Vienna" role="img" aria-label="Welcome to Vienna"></div>
   <ol class="stops"><li><span class="when">Morning</span><div><a class="stop" href="#travel">Arrive, check in, reset</a><span class="note">Land at VIE 9:45 AM. ATAV van collects us at 11:45 for the ride to the apartment.</span></div></li><li><span class="when">Afternoon</span><div><a class="stop" href="event-st-stephens-cathedral.html">St. Stephen&#x27;s Cathedral</a><span class="pill free">Booked</span><span class="note">Vienna&#x27;s Gothic heart and the tiled roof you have seen on every postcard.</span><span class="mode"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="1" y="1" width="14" height="14" rx="3.5" fill="currentColor"/><path d="M5.2 4.3v4.4a2.8 2.8 0 0 0 5.6 0V4.3" stroke="#F7EFE0" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>U3 to Stephansplatz, about 15 minutes door to door</span></div></li><li><span class="when">Afternoon</span><div><a class="stop" href="event-graben-kohlmarkt.html">Graben &amp; Kohlmarkt</a><span class="note">Vienna&#x27;s grandest shopping streets, strung with Advent chandeliers of light.</span><span class="mode"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="9" cy="2.6" r="1.7" fill="currentColor"/><path d="M9 5.4 6.6 7.2v3M9 5.4l2.3 1.9.9 2.4M8.3 9.6l2 1.5.5 3.4M8.3 9.6 5.5 11.2l-.7 3.3" stroke="currentColor" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>5 minutes on foot from the cathedral</span></div></li><li><span class="when">Early dinner</span><div><a class="stop" href="event-gasthaus-poeschl.html">Gasthaus Pöschl</a><span class="pill">Reserve</span><span class="note">A classic Viennese Beisl for schnitzel and seasonal dishes, steps from the Old Town.</span><span class="mode"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="9" cy="2.6" r="1.7" fill="currentColor"/><path d="M9 5.4 6.6 7.2v3M9 5.4l2.3 1.9.9 2.4M8.3 9.6l2 1.5.5 3.4M8.3 9.6 5.5 11.2l-.7 3.3" stroke="currentColor" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>5 minutes on foot from Stephansplatz</span></div></li><li><span class="when">Evening</span><div><a class="stop" href="event-rathausplatz-christmas-market.html">Rathausplatz Christmas Market</a><span class="note">Vienna&#x27;s flagship Christkindlmarkt in front of the floodlit City Hall.</span><span class="mode"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="1" y="1" width="14" height="14" rx="3.5" fill="currentColor"/><path d="M5.2 4.3v4.4a2.8 2.8 0 0 0 5.6 0V4.3" stroke="#F7EFE0" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>U3 to Volkstheater, then a 7 minute walk, about 20 minutes</span></div></li></ol></div></article><article class="day" id="day-wed">
   <div class="day-date"><div class="wd">Wednesday</div><div class="num">25</div><div class="mo">November</div></div>
-  <div class="day-body"><h3>Baroque Halls &amp; Market Bites</h3><p class="lede">The most beautiful library in the world, then coffee, market food and the Spittelberg lanes.</p>
-  <div class="day-photo" data-wiki="Austrian National Library" role="img" aria-label="Baroque Halls &amp; Market Bites"></div>
-  <ol class="stops"><li><span class="when">Morning</span><div><a class="stop" href="event-state-hall-national-library.html">State Hall, Austrian National Library</a><span class="pill">Book ahead</span><span class="note">One of the most beautiful library halls in the world.</span><span class="mode"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="1" y="1" width="14" height="14" rx="3.5" fill="currentColor"/><path d="M5.2 4.3v4.4a2.8 2.8 0 0 0 5.6 0V4.3" stroke="#F7EFE0" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>U3 to Herrengasse, then a 5 minute walk, about 20 minutes</span></div></li><li><span class="when">Late morning</span><div><a class="stop" href="event-cafe-central.html">Café Central</a><span class="note">The grand coffee house where Freud, Trotsky and poets once argued.</span><span class="mode"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="1" y="1" width="14" height="14" rx="3.5" fill="currentColor"/><path d="M5.2 4.3v4.4a2.8 2.8 0 0 0 5.6 0V4.3" stroke="#F7EFE0" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>U3 to Herrengasse, then a 3 minute walk, about 20 minutes</span></div></li><li><span class="when">Afternoon</span><div><a class="stop" href="event-naschmarkt.html">Naschmarkt</a><span class="note">Vienna&#x27;s biggest open market for snacks, spices and people watching.</span><span class="mode"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="1" y="1" width="14" height="14" rx="3.5" fill="currentColor"/><path d="M5.2 4.3v4.4a2.8 2.8 0 0 0 5.6 0V4.3" stroke="#F7EFE0" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>U4 to Kettenbrückengasse, about 20 minutes</span></div></li><li><span class="when">Afternoon</span><div><a class="stop" href="event-vollpension.html">Vollpension</a><span class="note">Homemade cake baked by Viennese grandmothers and grandfathers.</span><span class="mode"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="1" y="1" width="14" height="14" rx="3.5" fill="currentColor"/><path d="M5.2 4.3v4.4a2.8 2.8 0 0 0 5.6 0V4.3" stroke="#F7EFE0" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>A 2 minute walk from Naschmarkt</span></div></li><li><span class="when">Evening</span><div><a class="stop" href="event-spittelberg-market.html">Spittelberg Quarter &amp; Christmas Market</a><span class="note">Cobblestone lanes, Biedermeier houses and an arts and crafts market.</span><span class="mode"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="1" y="1" width="14" height="14" rx="3.5" fill="currentColor"/><path d="M5.2 4.3v4.4a2.8 2.8 0 0 0 5.6 0V4.3" stroke="#F7EFE0" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>U3 to Volkstheater, then a 5 minute walk, about 20 minutes</span></div></li><li><span class="when">Dinner</span><div><a class="stop" href="event-amerlingbeisl.html">Amerlingbeisl</a><span class="pill">Reserve</span><span class="note">A relaxed Spittelberg classic for traditional Austrian food.</span><span class="mode"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="9" cy="2.6" r="1.7" fill="currentColor"/><path d="M9 5.4 6.6 7.2v3M9 5.4l2.3 1.9.9 2.4M8.3 9.6l2 1.5.5 3.4M8.3 9.6 5.5 11.2l-.7 3.3" stroke="currentColor" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>In the market lanes, a 2 minute walk</span></div></li></ol></div></article><article class="day" id="day-thu">
+  <div class="day-body"><h3>Klimt, Books &amp; Market Bites</h3><p class="lede">The Kiss, the grandest library in Europe, then coffee, market food and the Spittelberg lanes.</p>
+  <div class="day-photo" data-wiki="The Kiss (Klimt)" role="img" aria-label="Klimt, Books &amp; Market Bites"></div>
+  <ol class="stops"><li><span class="when">Morning</span><div><a class="stop" href="event-belvedere-klimt.html">Upper Belvedere &amp; The Kiss</a><span class="pill">Book ahead</span><span class="note">Baroque palace, now home to the world&#x27;s largest Klimt collection.</span><span class="mode"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="3.2" y="2.4" width="9.6" height="9.4" rx="2.2" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M5.2 6.2h5.6M8 .6v1.8M5.6 11.8 4.3 14.4M10.4 11.8l1.3 2.6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>Tram 71 or D to Schloss Belvedere, about 20 minutes</span></div></li><li><span class="when">Late morning</span><div><a class="stop" href="event-state-hall-national-library.html">State Hall, Austrian National Library</a><span class="pill">Book ahead</span><span class="note">One of the most beautiful library halls in the world.</span><span class="mode"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="1" y="1" width="14" height="14" rx="3.5" fill="currentColor"/><path d="M5.2 4.3v4.4a2.8 2.8 0 0 0 5.6 0V4.3" stroke="#F7EFE0" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>U3 to Herrengasse, then a 5 minute walk, about 20 minutes</span></div></li><li><span class="when">Late morning</span><div><a class="stop" href="event-cafe-central.html">Café Central</a><span class="note">The grand coffee house where Freud, Trotsky and poets once argued.</span><span class="mode"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="1" y="1" width="14" height="14" rx="3.5" fill="currentColor"/><path d="M5.2 4.3v4.4a2.8 2.8 0 0 0 5.6 0V4.3" stroke="#F7EFE0" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>U3 to Herrengasse, then a 3 minute walk, about 20 minutes</span></div></li><li><span class="when">Afternoon</span><div><a class="stop" href="event-naschmarkt.html">Naschmarkt</a><span class="note">Vienna&#x27;s biggest open market for snacks, spices and people watching.</span><span class="mode"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="1" y="1" width="14" height="14" rx="3.5" fill="currentColor"/><path d="M5.2 4.3v4.4a2.8 2.8 0 0 0 5.6 0V4.3" stroke="#F7EFE0" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>U4 to Kettenbrückengasse, about 20 minutes</span></div></li><li><span class="when">Afternoon</span><div><a class="stop" href="event-vollpension.html">Vollpension</a><span class="note">Homemade cake baked by Viennese grandmothers and grandfathers.</span><span class="mode"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="1" y="1" width="14" height="14" rx="3.5" fill="currentColor"/><path d="M5.2 4.3v4.4a2.8 2.8 0 0 0 5.6 0V4.3" stroke="#F7EFE0" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>A 2 minute walk from Naschmarkt</span></div></li><li><span class="when">Evening</span><div><a class="stop" href="event-spittelberg-market.html">Spittelberg Quarter &amp; Christmas Market</a><span class="note">Cobblestone lanes, Biedermeier houses and an arts and crafts market.</span><span class="mode"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="1" y="1" width="14" height="14" rx="3.5" fill="currentColor"/><path d="M5.2 4.3v4.4a2.8 2.8 0 0 0 5.6 0V4.3" stroke="#F7EFE0" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>U3 to Volkstheater, then a 5 minute walk, about 20 minutes</span></div></li><li><span class="when">Dinner</span><div><a class="stop" href="event-amerlingbeisl.html">Amerlingbeisl</a><span class="pill">Reserve</span><span class="note">A relaxed Spittelberg classic for traditional Austrian food.</span><span class="mode"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="9" cy="2.6" r="1.7" fill="currentColor"/><path d="M9 5.4 6.6 7.2v3M9 5.4l2.3 1.9.9 2.4M8.3 9.6l2 1.5.5 3.4M8.3 9.6 5.5 11.2l-.7 3.3" stroke="currentColor" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>In the market lanes, a 2 minute walk</span></div></li></ol></div></article><article class="day" id="day-thu">
   <div class="day-date"><div class="wd">Thursday</div><div class="num">26</div><div class="mo">November</div></div>
   <div class="day-body"><h3>Imperial Vienna</h3><p class="lede">Schönbrunn by day, then Mozart and Strauss in a palace ballroom.</p>
   <div class="day-photo" data-wiki="Schönbrunn Palace" role="img" aria-label="Imperial Vienna"></div>
@@ -254,13 +332,13 @@ footer .script{font-family:var(--script);font-weight:600;font-size:1.75rem;color
   <div class="day-photo" data-wiki="Devín Castle" role="img" aria-label="Slovakia for the Day"></div>
   <ol class="stops"><li><span class="when">All day</span><div><a class="stop" href="event-bratislava.html">Bratislava &amp; the Slovak Countryside</a><span class="pill free">Booked</span><span class="note">Three castles, a cave, a farm lunch and a forest walk. Early start, back after dark.</span><span class="mode"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="2.2" y="2.4" width="11.6" height="9.6" rx="2.2" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M2.2 7.4h11.6M4.8 14.4v-2.4M11.2 14.4v-2.4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>Private van, picks us up in Vienna</span></div></li></ol></div></article><article class="day" id="day-sat">
   <div class="day-date"><div class="wd">Saturday</div><div class="num">28</div><div class="mo">November</div></div>
-  <div class="day-body"><h3>Klimt &amp; Farewell</h3><p class="lede">The Kiss in the morning, then a last dinner on the canal.</p>
-  <div class="day-photo" data-wiki="The Kiss (Klimt)" role="img" aria-label="Klimt &amp; Farewell"></div>
-  <ol class="stops"><li><span class="when">Morning</span><div><a class="stop" href="event-belvedere-klimt.html">Upper Belvedere &amp; The Kiss</a><span class="pill">Book ahead</span><span class="note">Baroque palace, now home to the world&#x27;s largest Klimt collection.</span><span class="mode"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="3.2" y="2.4" width="9.6" height="9.4" rx="2.2" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M5.2 6.2h5.6M8 .6v1.8M5.6 11.8 4.3 14.4M10.4 11.8l1.3 2.6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>Tram 71 or D to Schloss Belvedere, about 20 minutes</span></div></li><li><span class="when">Afternoon</span><div><span class="plain">Last look around</span><span class="note">Final market stops or anything we missed, before getting ready for dinner.</span></div></li><li><span class="when">Dinner</span><div><a class="stop" href="event-motto-am-fluss.html">Motto am Fluss</a><span class="pill">Reserve</span><span class="note">Request a window table. Modern Austrian cuisine above the Danube Canal. Request a window table.</span><span class="mode"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="1" y="1" width="14" height="14" rx="3.5" fill="currentColor"/><path d="M5.2 4.3v4.4a2.8 2.8 0 0 0 5.6 0V4.3" stroke="#F7EFE0" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>U3 to Stubentor or U4 to Schwedenplatz, about 15 minutes</span></div></li></ol></div></article><article class="day" id="day-sun">
+  <div class="day-body"><h3>Your Day, Your Way</h3><p class="lede">A free day to spend however you like, then a last dinner together on the canal.</p>
+  <div class="day-photo" data-wiki="Danube Canal" role="img" aria-label="Your Day, Your Way"></div>
+  <ol class="stops"><li><span class="when">All day</span><div><span class="plain">Choose your own adventure</span><span class="note">Nothing booked. Split up or stay together. Ideas are in <a href="index.html#extras">If there&#x27;s time</a>: the Riesenrad at sunset, the Prater winter market, the Hofburg and Sisi Museum, or just the markets again.</span></div></li><li><span class="when">Tip</span><div><span class="plain">Last chance for gifts</span><span class="note">Shops close early Saturday and almost everything shuts on Sunday. Buy what you are taking home today.</span></div></li><li><span class="when">Dinner</span><div><a class="stop" href="event-motto-am-fluss.html">Motto am Fluss</a><span class="pill">Reserve</span><span class="note">Request a window table. Modern Austrian cuisine above the Danube Canal. Request a window table.</span><span class="mode"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="1" y="1" width="14" height="14" rx="3.5" fill="currentColor"/><path d="M5.2 4.3v4.4a2.8 2.8 0 0 0 5.6 0V4.3" stroke="#F7EFE0" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>U3 to Stubentor or U4 to Schwedenplatz, about 15 minutes</span></div></li></ol></div></article><article class="day" id="day-sun">
   <div class="day-date"><div class="wd">Sunday</div><div class="num">29</div><div class="mo">November</div></div>
   <div class="day-body"><h3>Auf Wiedersehen</h3><p class="lede">Simple and flexible around flight times. Early departures leave before breakfast.</p>
   <div class="day-photo" data-wiki="Karlskirche" role="img" aria-label="Auf Wiedersehen"></div>
-  <ol class="stops"><li><span class="when">Morning</span><div><span class="plain">Leisurely breakfast</span><span class="note">If flight time allows.</span></div></li><li><span class="when">Morning</span><div><span class="plain">Last minute shopping</span><span class="note">Chocolates, ornaments or Austrian coffee. Fragile finds go in your carry-on.</span></div></li><li><span class="when">Midday</span><div><a class="stop" href="#travel">Transfer to the airport</a><span class="note">Leave around 5:15 AM for the 8:00 AM flight. No attraction tickets needed today.</span></div></li></ol></div></article>
+  <ol class="stops"><li><span class="when">Morning</span><div><span class="plain">Leisurely breakfast</span><span class="note">If flight time allows.</span></div></li><li><span class="when">Morning</span><div><span class="plain">Last minute shopping</span><span class="note">Chocolates, ornaments or Austrian coffee. Fragile finds go in your carry-on.</span></div></li><li><span class="when">Midday</span><div><a class="stop" href="#travel">Transfer to the airport</a><span class="note">ATAV van collects us around 5:15 AM for the 8:00 AM flight. No attraction tickets needed today.</span></div></li></ol></div></article>
 </div></section>
 
 <div class="checker" aria-hidden="true"></div>
@@ -286,11 +364,12 @@ footer .script{font-family:var(--script);font-weight:600;font-size:1.75rem;color
    <p>Fare, 2 travelers: $1,924.00<br><span class="fine">$962.00 per person</span></p>
    <p>Seats: $503.16<br>Taxes and fees: $409.46</p>
    <div class="big">$2,836.62</div><p class="fine">$1,418.31 per person. Basic Economy, so check bag rules before you pack.</p></div>
-  <div class="panel" style="border-color:var(--gold);background:rgba(234,211,165,.12)"><h3>Airport transfer, booked</h3><p>A Business Van from Airport Transfer Vienna (ATAV) takes all 8 of us from the airport to the door.</p>
-   <p><strong>Tue 24 Nov, pickup 11:45</strong><br>Vienna Airport to Louise-Martini-Weg 8. About 17.7 km, roughly 19 minutes.</p>
+  <div class="panel" style="border-color:var(--gold);background:rgba(234,211,165,.12)"><h3>Airport transfer, booked</h3><p>A Business Van from Airport Transfer Vienna (ATAV) carries all 8 of us both ways, so no trains or taxi queues with luggage.</p>
+   <p><strong>Arrival, Tue 24 Nov, pickup 11:45</strong><br>Vienna Airport to Louise-Martini-Weg 8. About 17.7 km, roughly 19 minutes.</p>
+   <p><strong>Return, Sun 29 Nov</strong><br>Collected at the apartment for the 8:00 AM flight.</p>
    <p class="fine">Meet and greet is included. Turn your phone on as soon as we land. The driver calls and tells us where to meet in the arrivals hall.</p>
    <p class="fine">ATAV is reachable 24/7 on +43 676 770 4159, by phone or WhatsApp. Free cancellation up to 24 hours before pickup.</p>
-   <div class="big">&euro;90</div><p class="fine">For all 8, about &euro;11 a person. Transfer &euro;78, meet and greet &euro;8, card fee &euro;4.</p></div>
+   <div class="big">$25</div><p class="fine">Per person, round trip, about $200 for all 8. The arrival leg is &euro;90 including meet and greet.</p></div>
   <div class="panel"><h3>Peachy Parking at ATL</h3><p>Peachy Parking, Indoor International, is booked for 2 cars.</p>
    <p><strong>Car 1:</strong> Michelle and Gavin ride with Melissa and Charles.<br><strong>Car 2:</strong> Connie and Ron ride with Kristin and Clay.</p>
    <p class="fine">Both cars park together. Check passports are valid well beyond the trip dates, and keep essentials in your carry on.</p></div>
@@ -302,7 +381,7 @@ footer .script{font-family:var(--script);font-weight:600;font-size:1.75rem;color
    <a class="btn btn-gold" href="https://www.wienerlinien.at/web/wl-en/travel-cards" target="_blank" rel="noopener">Buy a Wiener Linien pass</a>
    <p class="fine" style="margin-top:12px">Validate a paper ticket once before your first ride. City passes do not cover the airport run, so buy a separate ticket for that.</p></div>
   <div class="panel"><h3>Still to book</h3><ul style="margin:0;padding-left:18px"><li><a href="event-gasthaus-poeschl.html">Gasthaus Pöschl</a></li><li><a href="event-amerlingbeisl.html">Amerlingbeisl</a></li><li><a href="event-fromme-helene.html">Fromme Helene</a></li><li><a href="event-state-hall-national-library.html">State Hall, Austrian National Library</a></li><li><a href="event-belvedere-klimt.html">Upper Belvedere &amp; The Kiss</a></li><li><a href="event-motto-am-fluss.html">Motto am Fluss</a></li></ul></div>
-  <div class="panel"><h3>Sunday morning</h3><p>An 8:00 AM flight means leaving the apartment around 5:15 AM. Be downstairs with bags before the car arrives.</p>
+  <div class="panel"><h3>Sunday morning</h3><p>The ATAV van collects us at the apartment for the 8:00 AM flight, so be downstairs with bags before it arrives. Expect roughly 5:15 AM.</p>
    <p class="fine">Backup if anything goes wrong: Rennweg station is a 15 minute walk and the S7 runs from there to the airport in about 20 minutes.</p></div>
  </div>
 </div></section>
@@ -445,4 +524,6 @@ async function initEvent() {
   grid.addEventListener("click", e => { const im = e.target.closest("img"); if (im) Lightbox.open(list, +im.dataset.i); });
 }
 </script><script>initHome()</script>
+<button id="totop" aria-label="Back to top">&#8593;</button><script>(function(){var b=document.getElementById("totop");if(!b)return;b.onclick=function(){window.scrollTo({top:0,behavior:"smooth"})};var t;addEventListener("scroll",function(){clearTimeout(t);t=setTimeout(function(){b.classList.toggle("show",scrollY>700)},80)},{passive:true});})();</script>
+<script>(function(){var bar=document.querySelector(".daybar");if(!bar)return;var links=[].slice.call(bar.querySelectorAll("a[href^=\"#day-\"]"));var today=new Date().toISOString().slice(0,10);var map={"2026-11-24":"tue","2026-11-25":"wed","2026-11-26":"thu","2026-11-27":"fri","2026-11-28":"sat","2026-11-29":"sun"};var cur=map[today];if(cur){var a=bar.querySelector('a[href="#day-'+cur+'"]');if(a){a.textContent="Today";a.classList.add("on");var d=document.getElementById("day-"+cur);if(d&&!location.hash)setTimeout(function(){d.scrollIntoView()},120);}}else{var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(l){l.classList.toggle("on",l.getAttribute("href")==="#"+e.target.id)});}})},{rootMargin:"-130px 0px -60% 0px"});[].slice.call(document.querySelectorAll(".day[id]")).forEach(function(d){io.observe(d)});}})();</script>
 </body></html>
