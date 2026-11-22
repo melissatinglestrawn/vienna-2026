@@ -17,24 +17,12 @@ select all the .html files at once and drag them into GitHub in one batch.
 Tip: if you already uploaded loose files like style.css or site.js, you can delete them.
 They are not used anymore. Open each one in GitHub, click the trash icon, then Commit.
 
-## Turn on the photo gallery (Cloudinary, free)
-1. Sign up at cloudinary.com and copy your **Cloud name** from the Dashboard.
-2. Settings > Upload > Upload presets > Add upload preset. Signing mode **Unsigned**,
-   folder `vienna-2026`. Save and copy the preset **name**.
-3. Settings > Security > Restricted image types: UNCHECK **Resource list**. Save.
-4. In GitHub, open `gallery.html`, click the pencil icon, and find these lines near
-   the top of the file (around line 229):
+## Photo gallery
+Already set up. The shared Google Photos album is linked from `gallery.html`:
+https://photos.app.goo.gl/BTZhofP6zUQq4zqE9
 
-       cloudName: "",
-       uploadPreset: "",
-
-   Put your values between the quotes, for example:
-
-       cloudName: "melissa-vienna",
-       uploadPreset: "vienna_uploads",
-
-5. Optional: set `passcode: "gluhwein"` to require a shared word before friends see the gallery.
-6. Commit changes. The gallery works within a minute.
+To point it at a different album, search `gallery.html` for `photos.app.goo.gl`
+and replace both occurrences.
 
 ## Connect your Namecheap domain
 1. GitHub Settings > Pages > Custom domain: enter your domain and Save.

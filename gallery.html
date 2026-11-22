@@ -327,30 +327,43 @@ footer .script{font-family:var(--script);font-weight:600;font-size:1.75rem;color
 }
 </style>
 </head><body><header class="topbar"><div class="wrap"><a class="brand" href="index.html">Wien 2026</a><nav class="nav" aria-label="Main"><a href="index.html#itinerary">Itinerary</a><a href="travel.html">Before</a><a href="tickets.html">Tickets</a><a href="eats.html">Eats</a><a href="gallery.html" aria-current="page">Gallery</a></nav></div></header>
-<main><div class="wrap">
- <div class="gal-head"><h1>Our photos</h1><p style="color:var(--muted);max-width:56ch">Add your pictures from the trip. Pick the day so we can browse them together later. Tap any photo to view it full size or download the original.</p></div>
- <div id="gallery-app"></div>
- <div style="height:60px"></div>
-</div></main>
-<div class="checker gold" aria-hidden="true"></div><footer><div class="wrap"><div class="script">Good travel, good company, great memories</div>
+<main>
+<div class="ev-hero"><div class="img" role="img" aria-label="Our photos" style="aspect-ratio:16/7"></div>
+ <div class="checker gold" aria-hidden="true"></div>
+ <div class="wrap"><div class="crumb"><a href="index.html">Back to the trip</a></div>
+ <h1>Our Photos</h1><div class="when">One shared album, all eight of us</div>
+ <p style="max-width:60ch;margin:10px 0 0">Everything goes in one Google Photos album. Join it once before we fly and your pictures land there automatically.</p>
+ <div class="actions"><a class="btn btn-gold" id="album-btn" href="https://photos.app.goo.gl/BTZhofP6zUQq4zqE9" target="_blank" rel="noopener">Open the shared album</a></div></div></div>
+<div class="wrap">
+ <section style="padding:34px 0 10px">
+  <div class="notice" id="album-missing" style="margin-bottom:26px"><strong>The album link is not set yet.</strong> Create the shared album in Google Photos, copy its link, and it goes in two places in this file. Steps are at the bottom of this page.</div>
+
+  <div class="grid3" style="gap:16px">
+   <div class="panel" style="background:#fffaf0;border-color:#e2d2ae"><h3 style="color:var(--tanne)">1. Join once</h3>
+    <p style="color:var(--muted)">Tap <strong>Open the shared album</strong> above, then <strong>Join</strong>. Do this before we fly, on wifi, while you are still thinking about it.</p></div>
+   <div class="panel" style="background:#fffaf0;border-color:#e2d2ae"><h3 style="color:var(--tanne)">2. Add photos as you go</h3>
+    <p style="color:var(--muted)">In Google Photos, select your pictures, tap <strong>Share</strong>, and pick the Vienna album. Two taps. No need to wait until the end of the trip.</p></div>
+   <div class="panel" style="background:#fffaf0;border-color:#e2d2ae"><h3 style="color:var(--tanne)">3. Everyone sees everything</h3>
+    <p style="color:var(--muted)">The album sorts itself by date, so the week reads in order. Anyone can comment, and anyone can download the full resolution originals.</p></div>
+  </div>
+
+  <div class="grid3" style="gap:16px;margin-top:16px">
+   <div class="panel"><h3>Save your data</h3>
+    <p class="fine">In the Google Photos app, turn <strong>Back up over mobile data</strong> off and let it sync on the apartment wifi at night. Eight people uploading all week adds up.</p></div>
+   <div class="panel"><h3>Videos work too</h3>
+    <p class="fine">Clips go in the same album. Handy for the concert, the markets and the Bratislava drive.</p></div>
+   <div class="panel"><h3>Afterwards</h3>
+    <p class="fine">The album stays up as long as we want it. Anyone can bulk download the whole week when we get home.</p></div>
+  </div>
+
+  <div class="notice" style="margin-top:28px;border-left-color:var(--gold)"><strong>Can&#x27;t see the album?</strong> The link only works once you tap <strong>Join</strong>, and you need to be signed in to a Google account on that phone. If it asks you to request access, send Melissa a note and she can add you. The link is in the group chat too.</div>
+  <div style="height:40px"></div>
+ </section>
+</div>
+</main><div class="checker gold" aria-hidden="true"></div><footer><div class="wrap"><div class="script">Good travel, good company, great memories</div>
 <p>Vienna, November 23 to 29, 2026. Prices and hours change, so confirm on the booking pages before you go. Photos on event pages come from Wikimedia Commons and are credited on each image.</p></div></footer>
-<script>/* ============================================================
-   TRIP SETTINGS: edit these after you create your free
-   Cloudinary account (steps are in README.md).
-   ============================================================ */
-window.TRIP_CONFIG = {
-  // Cloudinary > Dashboard > "Cloud name"
-  cloudName: "",
-  // Cloudinary > Settings > Upload > Upload presets (must be "Unsigned")
-  uploadPreset: "",
-  // Every photo gets this tag so the gallery can find them all
-  tag: "vienna2026",
-  // Optional: a simple shared word friends type once to see the gallery.
-  // Leave "" for no passcode. This keeps casual visitors out; it is not bank-level security.
-  passcode: ""
-};
-</script>
-<script src="https://upload-widget.cloudinary.com/latest/global/all.js"></script>
+
+
 <script>/* Photos come live from Wikipedia / Wikimedia Commons (free, credited). */
 const WIKI = "https://en.wikipedia.org/w/api.php";
 
@@ -463,117 +476,9 @@ async function initEvent() {
   grid.addEventListener("click", e => { const im = e.target.closest("img"); if (im) Lightbox.open(list, +im.dataset.i); });
 }
 </script>
-<script>(function () {
-  const C = window.TRIP_CONFIG || {};
-  const root = document.getElementById("gallery-app");
-  const DAYS = { all: "All days", mon: "Mon 23 travel", tue: "Tue 24", wed: "Wed 25", thu: "Thu 26", fri: "Fri 27", sat: "Sat 28", sun: "Sun 29", trip: "Anytime" };
-  let photos = [], filter = "all";
 
-  function esc(s) { return String(s || "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c])); }
-
-  function gate() {
-    if (!C.passcode || localStorage.getItem("vienna_pass_ok") === "1") return start();
-    root.innerHTML = `<div class="gate"><h2 style="font-family:var(--display);color:var(--tanne);font-size:2rem;margin:0 0 8px">Friends only</h2>
-      <p>Enter the passcode from the group chat.</p>
-      <form id="gate-form" class="uploader" style="justify-content:center">
-        <label>Passcode<input id="gate-in" type="password" autocomplete="off" required></label>
-        <button class="btn btn-wine" type="submit">Open gallery</button></form>
-      <p id="gate-msg" role="alert" style="color:var(--wein)"></p></div>`;
-    document.getElementById("gate-form").onsubmit = e => {
-      e.preventDefault();
-      if (document.getElementById("gate-in").value.trim().toLowerCase() === String(C.passcode).toLowerCase()) {
-        try { localStorage.setItem("vienna_pass_ok", "1"); } catch (_) {}
-        start();
-      } else document.getElementById("gate-msg").textContent = "That passcode does not match. Check the group chat and try again.";
-    };
-  }
-
-  function start() {
-    if (!C.cloudName || !C.uploadPreset) {
-      root.innerHTML = `<div class="empty"><strong>The gallery is almost ready.</strong><br>Add your Cloudinary cloud name and upload preset near the top of gallery.html. Setup steps are in README.md.</div>`;
-      return;
-    }
-    let name = ""; try { name = localStorage.getItem("vienna_name") || ""; } catch (_) {}
-    root.innerHTML = `
-      <div class="uploader">
-        <label>Your name<input id="up-name" value="${esc(name)}" placeholder="First name" maxlength="40"></label>
-        <label>Which day?<select id="up-day">${Object.entries(DAYS).filter(([k]) => k !== "all").map(([k, v]) => `<option value="${k}">${v}</option>`).join("")}</select></label>
-        <button id="up-btn" class="btn btn-wine" type="button">Add photos</button>
-      </div>
-      <p id="up-msg" role="status" style="color:var(--muted);margin:0 0 6px"></p>
-      <div class="chips" role="group" aria-label="Filter by day">${Object.entries(DAYS).map(([k, v]) => `<button class="chip" data-f="${k}" aria-pressed="${k === "all"}">${v}</button>`).join("")}</div>
-      <div id="wall"></div>`;
-    const today = { "2026-11-23": "mon", "2026-11-24": "tue", "2026-11-25": "wed", "2026-11-26": "thu", "2026-11-27": "fri", "2026-11-28": "sat", "2026-11-29": "sun" }[new Date().toISOString().slice(0, 10)];
-    document.getElementById("up-day").value = today || "trip";
-    root.querySelectorAll(".chip").forEach(b => b.onclick = () => {
-      filter = b.dataset.f; root.querySelectorAll(".chip").forEach(x => x.setAttribute("aria-pressed", x === b)); render();
-    });
-    document.getElementById("up-btn").onclick = openWidget;
-    load();
-  }
-
-  function url(p, t) { return `https://res.cloudinary.com/${C.cloudName}/image/upload/${t}/v${p.version}/${p.public_id}.jpg`; }
-
-  async function load() {
-    const wall = document.getElementById("wall");
-    wall.innerHTML = `<p class="empty">Loading photos...</p>`;
-    try {
-      const r = await fetch(`https://res.cloudinary.com/${C.cloudName}/image/list/${encodeURIComponent(C.tag)}.json`, { cache: "no-store" });
-      if (r.status === 404) { photos = []; return render(); }
-      if (r.status === 401) { wall.innerHTML = `<p class="empty">Cloudinary is blocking the photo list. In Cloudinary go to Settings, Security, and uncheck "Resource list" under Restricted image types.</p>`; return; }
-      const j = await r.json();
-      photos = (j.resources || []).sort((a, b) => (b.created_at || "").localeCompare(a.created_at || ""));
-      render();
-    } catch (e) { wall.innerHTML = `<p class="empty">Photos could not load. Check your connection and refresh the page.</p>`; }
-  }
-
-  function meta(p) { return (p.context && p.context.custom) || {}; }
-
-  function render() {
-    const wall = document.getElementById("wall");
-    const list = photos.filter(p => filter === "all" || meta(p).day === filter);
-    if (!list.length) { wall.innerHTML = `<div class="empty">No photos here yet. Tap <strong>Add photos</strong> to share the first one.</div>`; return; }
-    wall.innerHTML = `<div class="masonry">${list.map((p, i) => {
-      const m = meta(p);
-      return `<figure><img loading="lazy" data-i="${i}" src="${url(p, "c_limit,w_700,q_auto,f_auto")}" alt="Photo from ${esc(m.name || "a friend")}">
-      <figcaption>${esc(m.name || "Someone")}${m.day && DAYS[m.day] ? ", " + DAYS[m.day] : ""}</figcaption></figure>`;
-    }).join("")}</div>`;
-    const lb = list.map(p => {
-      const m = meta(p);
-      return { full: url(p, "c_limit,w_1800,q_auto,f_auto"), caption: m.name || "",
-        capHtml: `${esc(m.name || "")} ${m.day ? ", " + esc(DAYS[m.day] || "") : ""}<br><a style="color:#E4CF9F" href="${url(p, "fl_attachment,q_auto")}">Download original</a>` };
-    });
-    wall.querySelector(".masonry").onclick = e => { const im = e.target.closest("img"); if (im) Lightbox.open(lb, +im.dataset.i); };
-  }
-
-  function openWidget() {
-    const name = document.getElementById("up-name").value.trim();
-    const day = document.getElementById("up-day").value;
-    const msg = document.getElementById("up-msg");
-    if (!name) { msg.textContent = "Add your name first so everyone knows who took the photo."; document.getElementById("up-name").focus(); return; }
-    try { localStorage.setItem("vienna_name", name); } catch (_) {}
-    if (!window.cloudinary) { msg.textContent = "The uploader did not load. Refresh the page and try again."; return; }
-    let added = 0;
-    cloudinary.createUploadWidget({
-      cloudName: C.cloudName, uploadPreset: C.uploadPreset,
-      sources: ["local", "camera", "google_drive"], multiple: true, maxFiles: 30,
-      clientAllowedFormats: ["jpg", "jpeg", "png", "heic", "heif", "webp"], maxImageFileSize: 25000000,
-      tags: [C.tag, "day-" + day], context: { name, day },
-      styles: { palette: { window: "#F7EFE0", windowBorder: "#B08A3E", tabIcon: "#6B1522", menuIcons: "#6B1522", textDark: "#231F1A", textLight: "#FFFFFF", link: "#6B1522", action: "#6B1522", inactiveTabIcon: "#6A5F52", error: "#8A2A38", inProgress: "#6B1522", complete: "#1E4B3C", sourceBg: "#FFFAF0" } }
-    }, (err, res) => {
-      if (err) { msg.textContent = "Upload failed. Try again, or try fewer photos at once."; return; }
-      if (res.event === "success") {
-        added++;
-        const i = res.info;
-        photos.unshift({ public_id: i.public_id, version: i.version, created_at: i.created_at, context: { custom: { name, day } } });
-        render();
-      }
-      if (res.event === "close" && added) msg.textContent = `Shared ${added} photo${added > 1 ? "s" : ""}. Friends will see ${added > 1 ? "them" : "it"} within a minute or two.`;
-    }).open();
-  }
-
-  gate();
-})();
-</script>
 <button id="totop" aria-label="Back to top">&#8593;</button><script>(function(){var b=document.getElementById("totop");if(!b)return;b.onclick=function(){window.scrollTo({top:0,behavior:"smooth"})};var t;addEventListener("scroll",function(){clearTimeout(t);t=setTimeout(function(){b.classList.toggle("show",scrollY>700)},80)},{passive:true});})();</script>
+<script>(function(){var b=document.getElementById("album-btn"),n=document.getElementById("album-missing");
+if(!b)return;var set=b.getAttribute("href").indexOf("ALBUM_LINK")===-1;
+if(set){if(n)n.remove();}else{b.removeAttribute("href");b.style.opacity=".55";b.style.cursor="not-allowed";}})();</script>
 </body></html>
