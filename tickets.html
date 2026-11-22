@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tickets &amp; Bookings | Vienna 2026</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#6B1522">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Wien 2026">
+<meta name="format-detection" content="telephone=yes">
+<meta name="description" content="Our Vienna Christmas getaway, November 23 to 29, 2026.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎄</text></svg>">
+<style>@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500..800;1,500..700&family=Jost:wght@300..600&family=Dancing+Script:wght@500..700&display=swap');
+
+:root{
+  --tanne:#6B1522;      /* deep wine, the dominant color */
+  --tanne-2:#8A2A38;
+  --wein:#1E4B3C;       /* fir green, the accent */
+  --gold:#B08A3E;
+  --gold-soft:#EAD3A5;
+  --paper:#F7EFE0;
+  --paper-2:#EFE3C8;
+  --ink:#231F1A;
+  --muted:#6A5F52;
+  --display:'Playfair Display', Georgia, 'Times New Roman', serif;
+  --body:'Jost', 'Futura', 'Century Gothic', system-ui, sans-serif;
+  --script:'Dancing Script', 'Segoe Script', cursive;
+  --wrap:1120px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17.5px;line-height:1.65;font-weight:400;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:var(--wein);text-underline-offset:3px;text-decoration-thickness:1px}
+a:hover{color:var(--tanne)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:2px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 22px}
+
+/* Wiener Werkstatte checker band: the one decorative motif */
+.checker{height:14px;background:
+  conic-gradient(var(--tanne) 25%, var(--paper) 0 50%, var(--tanne) 0 75%, var(--paper) 0) 0 0/14px 14px;}
+.checker.gold{background:conic-gradient(var(--gold) 25%, var(--tanne-2) 0 50%, var(--gold) 0 75%, var(--tanne-2) 0) 0 0/14px 14px}
+
+/* Top bar */
+.topbar{position:sticky;top:0;z-index:20;background:var(--tanne);color:var(--paper)}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:58px}
+.brand{white-space:nowrap;font-family:var(--display);font-size:1.35rem;color:var(--paper);text-decoration:none;letter-spacing:.02em}
+.brand:hover{color:var(--gold-soft)}
+.nav{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+.nav::-webkit-scrollbar{display:none}
+.nav a{color:var(--paper);text-decoration:none;padding:8px 12px;font-size:.95rem;white-space:nowrap;border-radius:3px}
+.nav a:hover,.nav a[aria-current="page"]{background:var(--tanne-2);color:var(--gold-soft)}
+
+/* Hero */
+.hero{position:relative;background:var(--tanne);color:var(--paper);overflow:hidden}
+.hero-img{position:absolute;inset:0;background-size:cover;background-position:center 30%;opacity:.38;filter:saturate(.8)}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(107,21,34,.25),rgba(107,21,34,.93))}
+.hero .wrap{position:relative;z-index:1;padding-top:90px;padding-bottom:56px}
+.hero h1{font-family:var(--display);font-weight:800;font-size:clamp(4.5rem,17vw,11rem);line-height:.85;margin:0;letter-spacing:-.01em}
+.hero .script{font-family:var(--script);font-weight:600;font-size:clamp(2.2rem,6.4vw,3.8rem);color:var(--gold-soft);margin:.05em 0 .25em .05em;line-height:1.2}
+.hero .dates{font-size:1.15rem;margin:0 0 28px;max-width:40ch}
+.countdown{display:inline-flex;align-items:baseline;gap:12px;border-top:1px solid var(--gold);border-bottom:1px solid var(--gold);padding:10px 2px}
+.countdown b{font-family:var(--display);font-size:2.6rem;font-weight:600;color:var(--gold-soft);line-height:1}
+.hero-links{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:3px;font-family:var(--body);font-size:1rem;font-weight:500;text-decoration:none;border:1.5px solid transparent;cursor:pointer;line-height:1.2}
+.btn-gold{background:var(--gold);color:#fff}
+.btn-gold:hover{background:#95732f;color:#fff}
+.btn-wine{background:var(--wein);color:#fff}
+.btn-wine:hover{background:#5f1621;color:#fff}
+.btn-line{border-color:currentColor;color:inherit;background:transparent}
+.btn-line:hover{background:rgba(176,138,62,.15);color:inherit}
+
+/* Sections */
+section{padding:64px 0}
+.sec-head{margin-bottom:34px;max-width:62ch}
+.sec-head h2{font-family:var(--display);font-weight:600;font-size:clamp(2.1rem,5vw,3.2rem);line-height:1.05;margin:0 0 8px;color:var(--tanne)}
+.sec-head p{margin:0;color:var(--muted);font-size:1.08rem}
+
+/* Itinerary: the programme */
+.day{display:grid;grid-template-columns:150px 1fr;gap:28px;padding:34px 0;border-top:1px solid #d8c7a3}
+.day:first-of-type{border-top:0}
+.day-date{position:sticky;top:78px;align-self:start}
+.day-date .wd{font-size:1rem;color:var(--wein);font-weight:500}
+.day-date .num{font-family:var(--display);font-size:4.6rem;line-height:.95;font-weight:700;color:var(--tanne)}
+.day-date .mo{color:var(--muted);font-size:.95rem}
+.day-body h3{font-family:var(--display);font-size:1.9rem;font-weight:600;margin:0 0 4px;line-height:1.15}
+.day-body .lede{margin:0 0 18px;color:var(--muted)}
+.day-photo{aspect-ratio:21/8;background:linear-gradient(135deg,#efe3c8,#e2cfa6 60%,#d9c295) center/cover;border-radius:2px;margin-bottom:18px}
+.stops{list-style:none;margin:0;padding:0;counter-reset:s}
+.stops li{display:grid;grid-template-columns:118px 1fr;gap:14px;padding:12px 0;border-bottom:1px dotted #cdb98e}
+.stops li:last-child{border-bottom:0}
+.stops .when{font-size:.92rem;color:var(--wein);font-weight:500;padding-top:2px}
+.stops a.stop{font-family:var(--display);font-size:1.24rem;font-weight:700;color:var(--ink);text-decoration:none}
+.stops a.stop:hover{color:var(--wein);text-decoration:underline}
+.stops .plain{font-family:var(--display);font-size:1.24rem;font-weight:700}
+.stops .note{display:block;color:var(--muted);font-size:.97rem;margin-top:2px}
+.pill{display:inline-block;font-size:.78rem;font-weight:500;padding:2px 8px;border-radius:20px;margin-left:8px;vertical-align:middle;background:var(--wein);color:#fff;font-family:var(--body)}
+.pill.free{background:transparent;color:var(--tanne);border:1px solid var(--tanne)}
+
+/* Travel */
+.dark{background:var(--tanne);color:var(--paper)}
+.dark .sec-head h2{color:var(--paper)}
+.dark .sec-head p{color:var(--gold-soft)}
+.dark a{color:var(--gold-soft)}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.panel{border:1px solid rgba(228,207,159,.35);padding:24px;border-radius:2px}
+.panel h3{font-family:var(--display);font-size:1.5rem;margin:0 0 4px;font-weight:600}
+.panel .big{font-family:var(--display);font-size:2.4rem;font-weight:600;color:var(--gold-soft);line-height:1.1;margin:10px 0 2px}
+.panel p{margin:.4em 0}
+.panel .fine{font-size:.88rem;opacity:.8}
+.panel .btn{margin-top:14px}
+
+/* Weather */
+.weather{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:26px}
+.stat{font-family:var(--display);font-size:2.8rem;font-weight:600;color:var(--tanne);line-height:1}
+.stat-label{color:var(--muted);margin-bottom:18px}
+.checklist{list-style:none;padding:0;margin:0}
+.checklist li{padding:7px 0 7px 26px;position:relative;border-bottom:1px dotted #cdb98e}
+.checklist li::before{content:"";position:absolute;left:2px;top:15px;width:10px;height:10px;background:var(--wein);transform:rotate(45deg)}
+.weather h3{font-family:var(--display);font-size:1.5rem;margin:0 0 8px;color:var(--tanne)}
+
+/* Extras */
+.extras{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.extra{display:grid;grid-template-columns:150px 1fr;background:#fffaf0;border:1px solid #e2d2ae;text-decoration:none;color:var(--ink)}
+.extra:hover{border-color:var(--gold);color:var(--ink)}
+.extra .ph{background:linear-gradient(135deg,#efe3c8,#e2cfa6) center/cover;min-height:150px}
+.extra div.tx{padding:16px 18px}
+.extra h3{font-family:var(--display);margin:0 0 4px;font-size:1.3rem;font-weight:600}
+.extra p{margin:0;color:var(--muted);font-size:.96rem}
+
+/* Gallery CTA */
+.cta{background:var(--wein);color:#fff;text-align:left}
+.cta .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.cta h2{font-family:var(--display);font-size:clamp(2rem,5vw,3rem);margin:0;font-weight:600}
+.cta p{margin:6px 0 0;opacity:.9}
+
+footer{background:var(--tanne);color:var(--gold-soft);padding:30px 0 40px;font-size:.95rem}
+footer .script{font-family:var(--script);font-weight:600;font-size:1.75rem;color:var(--paper)}
+
+/* Event pages */
+.ev-hero{background:var(--tanne);color:var(--paper)}
+.ev-hero .img{aspect-ratio:21/9;max-height:62vh;width:100%;background:linear-gradient(135deg,var(--tanne-2),var(--tanne) 70%) center/cover}
+.ev-hero .wrap{padding-top:26px;padding-bottom:34px}
+.crumb{font-size:.95rem;margin-bottom:12px}
+.crumb a{color:var(--gold-soft)}
+.ev-hero h1{font-family:var(--display);font-weight:700;letter-spacing:-.005em;font-size:clamp(2.6rem,7vw,4.8rem);line-height:1;margin:0 0 10px}
+.ev-hero .when{color:var(--gold-soft);font-size:1.1rem}
+.ev-hero .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.ev-layout{display:grid;grid-template-columns:1fr 330px;gap:50px;padding:50px 0}
+.story h2,.aside h2,.photos h2{font-family:var(--display);color:var(--tanne);font-weight:600;font-size:1.9rem;margin:0 0 12px}
+.story p{font-size:1.08rem;max-width:66ch}
+.story h3{font-family:var(--display);font-size:1.35rem;margin:28px 0 6px;color:var(--wein)}
+.aside{align-self:start;position:sticky;top:80px}
+.aside .box{background:#fffaf0;border:1px solid #e2d2ae;padding:22px;margin-bottom:18px}
+.aside h2{font-size:1.35rem}
+.aside ul{margin:0;padding-left:18px}
+.aside li{margin:6px 0}
+.linklist{list-style:none;padding:0!important}
+.linklist li{border-bottom:1px dotted #cdb98e;padding:7px 0;margin:0!important}
+.notice{background:#f3dfc3;border-left:4px solid var(--wein);padding:14px 16px;margin:0 0 18px;font-size:.98rem}
+.photos{padding:10px 0 60px}
+.photo-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px}
+.photo-grid figure{margin:0;background:var(--paper-2)}
+.photo-grid img{width:100%;aspect-ratio:4/3;object-fit:cover;cursor:zoom-in}
+.photo-grid figcaption{font-size:.78rem;color:var(--muted);padding:5px 8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.photo-grid figcaption a{color:var(--muted)}
+.pager{display:flex;justify-content:space-between;gap:16px;border-top:1px solid #d8c7a3;padding:26px 0 50px}
+.pager a{text-decoration:none;max-width:48%}
+.pager small{display:block;color:var(--muted)}
+.pager span{font-family:var(--display);font-size:1.25rem;font-weight:600}
+.pager .next{text-align:right;margin-left:auto}
+
+/* Lightbox */
+.lightbox{position:fixed;inset:0;background:rgba(38,8,13,.95);z-index:100;display:none;align-items:center;justify-content:center;padding:20px}
+.lightbox.open{display:flex}
+.lightbox img{max-height:82vh;max-width:92vw;object-fit:contain}
+.lightbox .cap{color:var(--paper);text-align:center;margin-top:10px;font-size:.95rem}
+.lightbox .lb-inner{display:flex;flex-direction:column;align-items:center}
+.lb-btn{position:absolute;background:rgba(0,0,0,.35);color:#fff;border:0;font-size:2rem;width:52px;height:52px;border-radius:50%;cursor:pointer}
+.lb-close{top:14px;right:14px;font-size:1.6rem}
+.lb-prev{left:10px;top:50%;transform:translateY(-50%)}
+.lb-next{right:10px;top:50%;transform:translateY(-50%)}
+
+/* Gallery page */
+.gal-head{padding:50px 0 20px}
+.gal-head h1{font-family:var(--display);font-size:clamp(2.8rem,8vw,5rem);margin:0;color:var(--tanne);line-height:1}
+.uploader{display:flex;flex-wrap:wrap;gap:12px;align-items:end;background:#fffaf0;border:1px solid #e2d2ae;padding:18px;margin:20px 0}
+.uploader label{display:flex;flex-direction:column;font-size:.92rem;color:var(--muted);gap:4px}
+.uploader input,.uploader select{font:inherit;padding:10px 12px;border:1px solid #cdb98e;background:#fff;border-radius:3px;min-width:190px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 22px}
+.chip{font:inherit;font-size:.93rem;padding:6px 14px;border-radius:20px;border:1px solid var(--tanne);background:transparent;color:var(--tanne);cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--tanne);color:var(--paper)}
+.masonry{columns:4 240px;column-gap:12px}
+.masonry figure{break-inside:avoid;margin:0 0 12px;background:var(--paper-2)}
+.masonry img{width:100%;cursor:zoom-in}
+.masonry figcaption{font-size:.85rem;color:var(--muted);padding:5px 8px}
+.empty{padding:40px;text-align:center;border:1.5px dashed #cdb98e;color:var(--muted)}
+.gate{max-width:420px;margin:80px auto;text-align:center}
+
+/* ---------- Mobile first pass ---------- */
+@media (max-width:860px){
+  html{-webkit-text-size-adjust:100%}
+  body{font-size:17px}
+  .wrap{padding:0 18px}
+
+  /* Nav wraps instead of clipping */
+  .topbar .wrap{flex-direction:column;align-items:stretch;gap:0;min-height:0;padding-top:10px;padding-bottom:2px}
+  .brand{font-size:1.1rem;padding-bottom:8px;border-bottom:1px solid rgba(234,211,165,.22)}
+  .nav{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;overflow:visible;margin:4px -4px 0}
+  .nav a{padding:11px 2px;font-size:.82rem;text-align:center;min-height:44px;display:flex;align-items:center;justify-content:center}
+
+  /* Hero: shorter, less dead space */
+  .hero .wrap{padding-top:34px;padding-bottom:30px}
+  .hero h1{font-size:clamp(3.6rem,20vw,5.4rem)}
+  .hero .script{font-size:clamp(1.9rem,8vw,2.6rem)}
+  .hero .dates{font-size:1.02rem;margin-bottom:20px}
+  .hero-links{gap:10px;margin-top:22px}
+  .hero-links .btn{flex:1 1 auto;justify-content:center;min-height:48px}
+  .countdown b{font-size:2.1rem}
+
+  section{padding:36px 0}
+  .sec-head{margin-bottom:22px}
+
+  /* Day blocks read as cards */
+  .day{grid-template-columns:1fr;gap:4px;padding:22px 0;scroll-margin-top:calc(var(--topbar-h,106px) + 62px)}
+  .day-date{position:static;display:flex;align-items:baseline;gap:9px}
+  .day-date .num{font-size:2.5rem}
+  .day-date .wd{font-size:1.05rem;font-weight:600}
+  .day-body h3{font-size:1.55rem}
+  .day-photo{aspect-ratio:16/9;margin-bottom:14px;border-radius:4px}
+
+  /* Stops: bigger taps, clearer hierarchy */
+  .stops li{grid-template-columns:1fr;gap:0;padding:14px 0}
+  .stops .when{font-size:.8rem;text-transform:uppercase;letter-spacing:.06em;margin-bottom:3px}
+  .stops a.stop,.stops .plain{font-size:1.18rem;line-height:1.3;display:inline-block;padding:2px 0}
+  .stops .note{font-size:.95rem;margin-top:4px}
+  .pill{margin-left:0;margin-top:5px;display:inline-block}
+  .mode{font-size:.87rem;margin-top:7px}
+
+  .panel{padding:20px}
+  .panel .big{font-size:2rem}
+  .btn{min-height:48px}
+  .extra{grid-template-columns:1fr}
+  .extra .ph{min-height:150px;aspect-ratio:16/9}
+  .grid3,.weather,.extras{grid-template-columns:1fr;gap:16px}
+  .cta .wrap{display:block}
+  .cta .btn{margin-top:16px;width:100%;justify-content:center}
+
+  /* Event pages: practical info first, then the story */
+  .ev-layout{grid-template-columns:1fr;gap:10px;padding:26px 0}
+  .aside{position:static;order:-1}
+  .aside .box{padding:18px}
+  .ev-hero .img{aspect-ratio:16/10;max-height:36vh}
+  .ev-hero .wrap{padding-top:20px;padding-bottom:26px}
+  .ev-hero h1{font-size:clamp(2.1rem,9vw,3rem)}
+  .ev-hero .actions{gap:9px}
+  .ev-hero .actions .btn{flex:1 1 100%;justify-content:center}
+  .story p{font-size:1.03rem}
+  .pager{flex-direction:column;gap:14px}
+  .pager a{max-width:100%}
+  .pager .next{text-align:left;margin-left:0}
+  .photo-grid{grid-template-columns:1fr 1fr;gap:8px}
+  .masonry{columns:2 140px;column-gap:8px}
+
+  .uploader{padding:14px}
+  .uploader label,.uploader input,.uploader select{min-width:0;width:100%}
+  .uploader .btn{width:100%;justify-content:center}
+  .gal-head{padding:30px 0 14px}
+  .gal-head h1{font-size:clamp(2.2rem,11vw,3.2rem)}
+  .lb-btn{width:46px;height:46px}
+  footer{padding:24px 0 34px}
+  footer .script{font-size:1.5rem}
+}
+@media (max-width:400px){
+  .nav a{font-size:.76rem;padding:11px 1px}
+  .day-date .num{font-size:2.2rem}
+}
+
+/* Day jump chips */
+.daybar{position:sticky;top:var(--topbar-h,106px);z-index:15;background:var(--paper);border-bottom:1px solid #d8c7a3;padding:9px 0;margin-bottom:6px;display:none}
+.daybar .wrap{display:flex;gap:7px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.daybar .wrap::-webkit-scrollbar{display:none}
+.daybar a{flex:0 0 auto;font-size:.86rem;padding:8px 13px;border-radius:20px;border:1px solid var(--tanne);color:var(--tanne);text-decoration:none;white-space:nowrap;min-height:38px;display:flex;align-items:center}
+.daybar a.on{background:var(--tanne);color:var(--paper)}
+@media (max-width:860px){.daybar{display:block}}
+
+/* Back to top */
+#totop{position:fixed;right:14px;bottom:14px;z-index:30;width:46px;height:46px;border-radius:50%;border:0;background:var(--tanne);color:var(--paper);font-size:1.3rem;cursor:pointer;box-shadow:0 2px 10px rgba(0,0,0,.28);display:none;align-items:center;justify-content:center}
+#totop.show{display:flex}
+
+/* Travel mode chips */
+.mode{display:flex;align-items:flex-start;gap:7px;margin-top:6px;font-size:.9rem;color:var(--wein)}
+.mode svg{width:15px;height:15px;flex:0 0 15px;margin-top:3px}
+.aside .mode{font-size:1rem;margin:0}
+.aside .from-flat{color:var(--muted);font-size:.9rem;margin:.6em 0 0}
+</style>
+
+</head><body><header class="topbar"><div class="wrap"><a class="brand" href="index.html">Wien 2026</a><nav class="nav" aria-label="Main"><a href="index.html#itinerary">Itinerary</a><a href="index.html#travel">Travel</a><a href="index.html#packing">Packing</a><a href="index.html#extras">Extras</a><a href="tickets.html" aria-current="page">Tickets</a><a href="eats.html">Eats</a><a href="gallery.html">Gallery</a></nav></div></header>
+<main>
+<div class="ev-hero"><div class="img" role="img" aria-label="Tickets and bookings" style="aspect-ratio:16/7"></div>
+ <div class="checker gold" aria-hidden="true"></div>
+ <div class="wrap"><div class="crumb"><a href="index.html">Back to the trip</a></div>
+ <h1>Tickets &amp; Bookings</h1><div class="when">Everything in one place</div>
+ <p style="max-width:62ch;margin:10px 0 0">Every booking for the trip, what it covers, and where to get the file. Save this page to your home screen before we fly.</p></div></div>
+<div class="wrap">
+ <section style="padding:34px 0 10px">
+  <div class="notice" id="setup" style="margin-bottom:26px"><strong>All the files are in one shared Drive folder.</strong> Every button below opens it. <a href="https://drive.google.com/drive/folders/1PyJwDn3kpj1YZQqTOodsuuP3xbM8V7kO?usp=sharing" target="_blank" rel="noopener">Open the folder</a>, and download what you need to your phone before we fly. Airport wifi is not something to count on.</div>
+  <div class="grid3" style="gap:16px"><div class="panel" style="background:#fffaf0;border-color:#e2d2ae"><h3 style="color:var(--tanne)">Flights, United <span class="pill">Booked</span></h3><p style="color:var(--wein);margin:.2em 0 .6em">Out Mon 23 Nov &middot; Home Sun 29 Nov</p><ul style="margin:0;padding-left:18px;color:var(--muted)"><li>UA 8830 ATL to Frankfurt, 4:30 PM, A330-300, Lufthansa</li><li>UA 9854 Frankfurt to Vienna, 8:20 AM, lands 9:45 AM Tue</li><li>UA 9857 Vienna to Frankfurt, 8:00 AM Sun</li><li>UA 8831 Frankfurt to ATL, 10:30 AM, lands 2:40 PM</li><li>Basic Economy. Check bag rules before packing.</li></ul><a class="btn btn-gold" style="margin-top:12px" href="https://drive.google.com/drive/folders/1PyJwDn3kpj1YZQqTOodsuuP3xbM8V7kO?usp=sharing" target="_blank" rel="noopener" data-ticket="1">Open boarding passes</a></div><div class="panel" style="background:#fffaf0;border-color:#e2d2ae"><h3 style="color:var(--tanne)">Airport transfer, ATAV <span class="pill">Booked</span></h3><p style="color:var(--wein);margin:.2em 0 .6em">Tue 24 Nov pickup 11:45 &middot; Sun 29 Nov return</p><ul style="margin:0;padding-left:18px;color:var(--muted)"><li>Business Van, all 8 of us</li><li>Vienna Airport to Bui Vien, H&ouml;rnesgasse 17</li><li>Booking a684beca640</li><li>Meet and greet included. Phones on when we land, the driver calls.</li><li>ATAV 24/7: +43 676 770 4159, phone or WhatsApp</li></ul><a class="btn btn-gold" style="margin-top:12px" href="https://drive.google.com/drive/folders/1PyJwDn3kpj1YZQqTOodsuuP3xbM8V7kO?usp=sharing" target="_blank" rel="noopener" data-ticket="1">Open transfer confirmation</a><p class="fine" style="margin-top:10px">Flight number on the booking reads UA9856. Our Frankfurt to Vienna leg is UA9854. Worth correcting so they track the right flight.</p></div><div class="panel" style="background:#fffaf0;border-color:#e2d2ae"><h3 style="color:var(--tanne)">St. Stephen&#x27;s &amp; Dom Museum <span class="pill">Booked</span></h3><p style="color:var(--wein);margin:.2em 0 .6em">Tue 24 Nov, valid 10:00 to 18:00</p><ul style="margin:0;padding-left:18px;color:var(--muted)"><li>8 All-Inclusive tickets</li><li>Start at <strong>Dom Museum Wien, Stephansplatz 6</strong>, not the cathedral door</li><li>Swap the confirmation for actual tickets at the museum desk</li><li>Allow 10 minutes for the desk and cloakroom</li><li>Once collected, valid for a year</li></ul><a class="btn btn-gold" style="margin-top:12px" href="https://drive.google.com/drive/folders/1PyJwDn3kpj1YZQqTOodsuuP3xbM8V7kO?usp=sharing" target="_blank" rel="noopener" data-ticket="1">Download the 8 tickets</a></div><div class="panel" style="background:#fffaf0;border-color:#e2d2ae"><h3 style="color:var(--tanne)">Sch&ouml;nbrunn Palace <span class="pill">Booked</span></h3><p style="color:var(--wein);margin:.2em 0 .6em">Thu 26 Nov, timed entry</p><ul style="margin:0;padding-left:18px;color:var(--muted)"><li>$47 a person</li><li>Timed entry slots are enforced, check the time on the ticket</li><li>U3 one stop to Landstra&szlig;e, then U4 to Sch&ouml;nbrunn, about 30 minutes</li><li>Audio guide included with most tickets</li></ul><a class="btn btn-gold" style="margin-top:12px" href="https://drive.google.com/drive/folders/1PyJwDn3kpj1YZQqTOodsuuP3xbM8V7kO?usp=sharing" target="_blank" rel="noopener" data-ticket="1">Download the tickets</a></div><div class="panel" style="background:#fffaf0;border-color:#e2d2ae"><h3 style="color:var(--tanne)">Imperial Gala Concert <span class="pill">Booked</span></h3><p style="color:var(--wein);margin:.2em 0 .6em">Thu 26 Nov, 8:00 PM, Palais Auersperg</p><ul style="margin:0;padding-left:18px;color:var(--muted)"><li>8 tickets, Category B</li><li>Auerspergstra&szlig;e 1, 1080 Wien</li><li>Each ticket is its own page in the PDF, so everyone needs their own</li><li>Doors open ahead of the 8:00 start. Aim to arrive by 7:30.</li><li>Venue: tickets@palaisauersperg.events, +43 670 7888230</li></ul><a class="btn btn-gold" style="margin-top:12px" href="https://drive.google.com/drive/folders/1PyJwDn3kpj1YZQqTOodsuuP3xbM8V7kO?usp=sharing" target="_blank" rel="noopener" data-ticket="1">Download the 8 tickets</a></div><div class="panel" style="background:#fffaf0;border-color:#e2d2ae"><h3 style="color:var(--tanne)">Bratislava &amp; the Slovak Countryside <span class="pill">Booked</span></h3><p style="color:var(--wein);margin:.2em 0 .6em">Fri 27 Nov, all day</p><ul style="margin:0;padding-left:18px;color:var(--muted)"><li>$772 for the group, $96.50 a person</li><li>Private van with a guide, pickup in Vienna</li><li>Operated by D&amp;S Taxi und Limousinenservice KG</li><li>Bring your passport. Comfortable shoes, warm layers.</li></ul><a class="btn btn-gold" style="margin-top:12px" href="https://drive.google.com/drive/folders/1PyJwDn3kpj1YZQqTOodsuuP3xbM8V7kO?usp=sharing" target="_blank" rel="noopener" data-ticket="1">Open the tour voucher</a></div><div class="panel" style="background:#fffaf0;border-color:#e2d2ae"><h3 style="color:var(--tanne)">Apartment <span class="pill">Booked</span></h3><p style="color:var(--wein);margin:.2em 0 .6em">Mon 23 to Sun 29 Nov</p><ul style="margin:0;padding-left:18px;color:var(--muted)"><li>Louise-Martini-Weg 8, 1030 Wien</li><li>$744.45 per couple, $2,977.79 total</li><li>Bags are at Bui Vien until 6:30 PM Tuesday</li></ul><a class="btn btn-gold" style="margin-top:12px" href="https://drive.google.com/drive/folders/1PyJwDn3kpj1YZQqTOodsuuP3xbM8V7kO?usp=sharing" target="_blank" rel="noopener" data-ticket="1">Open the Airbnb booking</a></div><div class="panel" style="background:#fffaf0;border-color:#e2d2ae"><h3 style="color:var(--tanne)">Peachy Parking, ATL <span class="pill">Booked</span></h3><p style="color:var(--wein);margin:.2em 0 .6em">Mon 23 to Sun 29 Nov</p><ul style="margin:0;padding-left:18px;color:var(--muted)"><li>Indoor International, 2 cars</li><li>Car 1: Michelle and Gavin with us</li><li>Car 2: Connie and Ron with Kristin and Clay</li></ul><a class="btn btn-gold" style="margin-top:12px" href="https://drive.google.com/drive/folders/1PyJwDn3kpj1YZQqTOodsuuP3xbM8V7kO?usp=sharing" target="_blank" rel="noopener" data-ticket="1">Open the parking confirmation</a></div><div class="panel" style="background:#fffaf0;border-color:#e2d2ae"><h3 style="color:var(--tanne)">Upper Belvedere <span class="pill">Booked</span></h3><p style="color:var(--wein);margin:.2em 0 .6em">Wed 25 Nov, 1:30 PM entry</p><ul style="margin:0;padding-left:18px;color:var(--muted)"><li>About $23 a person</li><li>Timed entry at 1:30 PM, arrive 10 minutes early</li><li>Upper Belvedere, Prinz-Eugen-Stra&szlig;e 27</li><li>Tram D from Schottentor, direct, about 15 minutes</li></ul></div><div class="panel" style="background:#fffaf0;border-color:#e2d2ae"><h3 style="color:var(--tanne)">Hofburg Imperial Apartments <span class="pill free">Still to book</span></h3><p style="color:var(--wein);margin:.2em 0 .6em">Wed 25 Nov, 10:00 AM</p><ul style="margin:0;padding-left:18px;color:var(--muted)"><li>About &euro;27 a person, day ticket</li><li>Imperial Apartments, Sisi Museum and Silver Collection</li><li>Open 9:00 to 5:30 daily, no timed entry</li><li>Enter at Michaelerplatz, under the dome</li><li>A new season starts 19 Nov 2026, so confirm the price</li></ul></div><div class="panel" style="background:#fffaf0;border-color:#e2d2ae"><h3 style="color:var(--tanne)">State Hall, National Library <span class="pill">Booked</span></h3><p style="color:var(--wein);margin:.2em 0 .6em">Wed 25 Nov, late morning</p><ul style="margin:0;padding-left:18px;color:var(--muted)"><li>About $14 a person</li><li>Josefsplatz 1, inside the Hofburg complex</li><li>Be there for the 9:00 opening</li><li>One room, 45 minutes is plenty</li></ul></div><div class="panel" style="background:#fffaf0;border-color:#e2d2ae"><h3 style="color:var(--tanne)">Wiener Linien passes <span class="pill free">Still to buy</span></h3><p style="color:var(--wein);margin:.2em 0 .6em">Buy on arrival, Tue 24 Nov</p><ul style="margin:0;padding-left:18px;color:var(--muted)"><li>7 day Vienna ticket, about &euro;28.90 each</li><li>Buy in the WienMobil app or at any station machine</li><li>Validate paper tickets once before the first ride</li></ul></div></div>
+  <div class="notice" style="margin-top:28px"><strong>Why the files are not on this site.</strong> This page is public to anyone who finds it, and the concert and cathedral tickets carry scannable codes, so a stranger could download working tickets. The PDFs live in a Google Drive folder that only people with the link can open, and the buttons point there. Keep the link inside the group.</div><div class="notice" style="margin-top:14px;border-left-color:var(--gold)"><strong>Before we fly.</strong> Download your own copies to your phone rather than relying on the folder on the day. Each gala ticket is a separate page in its PDF, so everyone needs their own page, not just the first one.</div>
+  <div style="height:40px"></div>
+ </section>
+</div>
+</main><div class="checker gold" aria-hidden="true"></div><footer><div class="wrap"><div class="script">Good travel, good company, great memories</div>
+<p>Vienna, November 23 to 29, 2026. Prices and hours change, so confirm on the booking pages before you go. Photos on event pages come from Wikimedia Commons and are credited on each image.</p></div></footer>
+<script>/* Photos come live from Wikipedia / Wikimedia Commons (free, credited). */
+const WIKI = "https://en.wikipedia.org/w/api.php";
+
+async function wikiLeadImages(titles, size = 1400) {
+  const out = {};
+  const uniq = [...new Set(titles)];
+  for (let i = 0; i < uniq.length; i += 40) {
+    const batch = uniq.slice(i, i + 40);
+    const url = `${WIKI}?action=query&format=json&origin=*&redirects=1&prop=pageimages&piprop=thumbnail&pithumbsize=${size}&titles=${encodeURIComponent(batch.join("|"))}`;
+    try {
+      const j = await (await fetch(url)).json();
+      const map = {};
+      (j.query.normalized || []).forEach(n => map[n.to] = n.from);
+      (j.query.redirects || []).forEach(n => map[n.to] = map[n.from] || n.from);
+      Object.values(j.query.pages || {}).forEach(p => {
+        if (p.thumbnail) { out[p.title] = p.thumbnail.source; if (map[p.title]) out[map[p.title]] = p.thumbnail.source; }
+      });
+    } catch (e) { /* offline: keep placeholders */ }
+  }
+  return out;
+}
+
+function stripHtml(s) { const d = document.createElement("div"); d.innerHTML = s || ""; return (d.textContent || "").trim(); }
+
+async function wikiGallery(titles, limit = 9) {
+  const skip = /(logo|map|icon|flag|coat[_ ]of|wappen|signature|plan|locator|diagram|symbol|seal|emblem|commons-|wiki|pictogram|\.svg|\.gif|\.tif)/i;
+  const photos = []; const seen = new Set();
+  for (const t of titles) {
+    if (photos.length >= limit) break;
+    const url = `${WIKI}?action=query&format=json&origin=*&redirects=1&generator=images&gimlimit=60&titles=${encodeURIComponent(t)}&prop=imageinfo&iiprop=url|extmetadata&iiurlwidth=900`;
+    try {
+      const j = await (await fetch(url)).json();
+      Object.values((j.query && j.query.pages) || {}).forEach(p => {
+        if (photos.length >= limit || seen.has(p.title) || skip.test(p.title)) return;
+        if (!/\.(jpe?g|png|webp)$/i.test(p.title) || !p.imageinfo) return;
+        const ii = p.imageinfo[0]; const m = ii.extmetadata || {};
+        seen.add(p.title);
+        photos.push({
+          thumb: ii.thumburl || ii.url, full: ii.url, page: ii.descriptionurl,
+          caption: stripHtml(m.ObjectName && m.ObjectName.value) || p.title.replace(/^File:/, "").replace(/\.[a-z]+$/i, "").replace(/_/g, " "),
+          credit: [stripHtml(m.Artist && m.Artist.value), m.LicenseShortName && m.LicenseShortName.value].filter(Boolean).join(", ")
+        });
+      });
+    } catch (e) {}
+  }
+  return photos;
+}
+
+/* Lightbox shared by event pages and gallery */
+const Lightbox = (() => {
+  let items = [], idx = 0, el;
+  function build() {
+    el = document.createElement("div");
+    el.className = "lightbox"; el.setAttribute("role", "dialog"); el.setAttribute("aria-modal", "true");
+    el.innerHTML = `<button class="lb-btn lb-close" aria-label="Close">&times;</button>
+      <button class="lb-btn lb-prev" aria-label="Previous photo">&#8249;</button>
+      <div class="lb-inner"><img alt=""><div class="cap"></div></div>
+      <button class="lb-btn lb-next" aria-label="Next photo">&#8250;</button>`;
+    document.body.appendChild(el);
+    el.querySelector(".lb-close").onclick = close;
+    el.querySelector(".lb-prev").onclick = () => show(idx - 1);
+    el.querySelector(".lb-next").onclick = () => show(idx + 1);
+    el.addEventListener("click", e => { if (e.target === el) close(); });
+    document.addEventListener("keydown", e => {
+      if (!el.classList.contains("open")) return;
+      if (e.key === "Escape") close(); if (e.key === "ArrowLeft") show(idx - 1); if (e.key === "ArrowRight") show(idx + 1);
+    });
+  }
+  function show(i) {
+    idx = (i + items.length) % items.length; const it = items[idx];
+    const im = el.querySelector("img");
+    im.onerror = () => { if (it.fallback && im.src !== it.fallback) im.src = it.fallback; };
+    im.src = it.full; im.alt = it.caption || "";
+    el.querySelector(".cap").innerHTML = it.capHtml || (it.caption || "");
+  }
+  function open(list, i) { if (!el) build(); items = list; el.classList.add("open"); show(i); el.querySelector(".lb-close").focus(); }
+  function close() { el.classList.remove("open"); }
+  return { open };
+})();
+
+/* Home page: day banners, extras, hero, countdown */
+async function initHome() {
+  const nodes = [...document.querySelectorAll("[data-wiki]")];
+  const imgs = await wikiLeadImages(nodes.map(n => n.dataset.wiki));
+  nodes.forEach(n => { const src = imgs[n.dataset.wiki]; if (src) n.style.backgroundImage = `url("${src}")`; });
+  const cd = document.getElementById("countdown");
+  if (cd) {
+    const depart = new Date("2026-11-23T13:10:00-05:00");
+    const days = Math.ceil((depart - new Date()) / 86400000);
+    cd.innerHTML = days > 1 ? `<b>${days}</b> days until we fly` : days === 1 ? `<b>1</b> day until we fly` : days > -7 ? `<b>Servus</b> we are in Vienna` : `<b>Danke</b> for the memories`;
+  }
+}
+
+/* Event page: hero + photo grid */
+async function initEvent() {
+  const cfg = window.EVENT || {};
+  const hero = document.querySelector(".ev-hero .img");
+  if (hero) {
+    const imgs = await wikiLeadImages(cfg.wiki || []);
+    const first = (cfg.wiki || []).map(t => imgs[t]).find(Boolean);
+    if (first) hero.style.backgroundImage = `url("${first}")`;
+  }
+  const grid = document.getElementById("photo-grid");
+  if (!grid) return;
+  const photos = await wikiGallery(cfg.wiki || [], 9);
+  if (!photos.length) { grid.outerHTML = `<p class="empty">Photos could not load right now. Try the Wikipedia link in "Read more."</p>`; return; }
+  grid.innerHTML = photos.map((p, i) => `<figure><img loading="lazy" src="${p.thumb}" alt="${p.caption.replace(/"/g, "&quot;")}" data-i="${i}">
+    <figcaption><a href="${p.page}" target="_blank" rel="noopener">${p.credit || "Wikimedia Commons"}</a></figcaption></figure>`).join("");
+  const list = photos.map(p => ({ full: p.thumb.replace(/\/\d+px-/, "/1600px-"), fallback: p.thumb, caption: p.caption, capHtml: `${p.caption}<br><small><a style="color:#E4CF9F" href="${p.page}" target="_blank" rel="noopener">Photo: ${p.credit || "Wikimedia Commons"}</a></small>` }));
+  grid.addEventListener("click", e => { const im = e.target.closest("img"); if (im) Lightbox.open(list, +im.dataset.i); });
+}
+</script><script>wikiLeadImages(["Naschmarkt"]).then(m=>{const el=document.querySelector(".ev-hero .img"), u=m["Naschmarkt"];if(u&&el) el.style.backgroundImage=`url("${u}")`;}).catch(()=>{});</script>
+<button id="totop" aria-label="Back to top">&#8593;</button><script>(function(){var b=document.getElementById("totop");if(!b)return;b.onclick=function(){window.scrollTo({top:0,behavior:"smooth"})};var t;addEventListener("scroll",function(){clearTimeout(t);t=setTimeout(function(){b.classList.toggle("show",scrollY>700)},80)},{passive:true});})();</script>
+</body></html>
