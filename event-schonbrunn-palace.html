@@ -208,8 +208,8 @@ footer .script{font-family:var(--script);font-weight:600;font-size:1.75rem;color
   /* Nav wraps instead of clipping */
   .topbar .wrap{flex-direction:column;align-items:stretch;gap:0;min-height:0;padding-top:10px;padding-bottom:2px}
   .brand{font-size:1.1rem;padding-bottom:8px;border-bottom:1px solid rgba(234,211,165,.22)}
-  .nav{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;overflow:visible;margin:4px -4px 0}
-  .nav a{padding:11px 2px;font-size:.82rem;text-align:center;min-height:44px;display:flex;align-items:center;justify-content:center}
+  .nav{display:grid;grid-template-columns:repeat(5,1fr);gap:2px;overflow:visible;margin:4px -4px 0}
+  .nav a{padding:12px 2px;font-size:.86rem;text-align:center;min-height:46px;display:flex;align-items:center;justify-content:center}
 
   /* Hero: shorter, less dead space */
   .hero .wrap{padding-top:34px;padding-bottom:30px}
@@ -274,7 +274,7 @@ footer .script{font-family:var(--script);font-weight:600;font-size:1.75rem;color
   footer .script{font-size:1.5rem}
 }
 @media (max-width:400px){
-  .nav a{font-size:.76rem;padding:11px 1px}
+  .nav a{font-size:.78rem;padding:12px 1px}
   .day-date .num{font-size:2.2rem}
 }
 
@@ -295,9 +295,39 @@ footer .script{font-family:var(--script);font-weight:600;font-size:1.75rem;color
 .mode svg{width:15px;height:15px;flex:0 0 15px;margin-top:3px}
 .aside .mode{font-size:1rem;margin:0}
 .aside .from-flat{color:var(--muted);font-size:.9rem;margin:.6em 0 0}
+
+/* ---------- Streamlining pass ---------- */
+.daybar a{font-weight:500}
+.sec-head h2{letter-spacing:-.01em}
+
+/* Days read as cards you can thumb through */
+@media (max-width:860px){
+  .day{border-top:0;padding:0 0 18px;scroll-margin-top:calc(var(--topbar-h,106px) + 58px)}
+  .day-body{background:#fffaf0;border:1px solid #e9dcbd;border-radius:10px;padding:16px 15px 6px;box-shadow:0 1px 3px rgba(60,30,20,.05)}
+  .day-date{padding:16px 2px 8px;align-items:center}
+  .day-date .num{font-size:2.3rem;color:var(--tanne)}
+  .day-date .wd{font-size:1.02rem;letter-spacing:.01em}
+  .day-date .mo{font-size:.9rem}
+  .day-photo{margin:0 -15px 14px;border-radius:9px 9px 0 0;aspect-ratio:2/1}
+  .day-body h3{font-size:1.42rem;margin-bottom:3px}
+  .day-body .lede{font-size:.98rem;margin-bottom:14px}
+  .stops li{padding:13px 0}
+  .stops li:last-child{border-bottom:0;padding-bottom:4px}
+  .stops .when{color:var(--wein);font-weight:600}
+  .stops a.stop,.stops .plain{font-size:1.14rem}
+  .panel{border-radius:9px}
+  .extra{border-radius:9px;overflow:hidden}
+  .notice{border-radius:0 8px 8px 0}
+  .aside .box{border-radius:9px}
+  section{padding:30px 0}
+  .hero .wrap{padding-top:28px;padding-bottom:26px}
+  .hero h1{font-size:clamp(3.4rem,19vw,5rem)}
+  .sec-head h2{font-size:1.9rem}
+  .sec-head p{font-size:1rem}
+}
 </style>
 <script>window.EVENT={"wiki": ["Sch\u00f6nbrunn Palace"]}</script>
-</head><body><header class="topbar"><div class="wrap"><a class="brand" href="index.html">Wien 2026</a><nav class="nav" aria-label="Main"><a href="index.html#itinerary">Itinerary</a><a href="index.html#travel">Travel</a><a href="index.html#packing">Packing</a><a href="index.html#extras">Extras</a><a href="tickets.html">Tickets</a><a href="eats.html">Eats</a><a href="gallery.html">Gallery</a></nav></div></header>
+</head><body><header class="topbar"><div class="wrap"><a class="brand" href="index.html">Wien 2026</a><nav class="nav" aria-label="Main"><a href="index.html#itinerary">Itinerary</a><a href="travel.html">Before</a><a href="tickets.html">Tickets</a><a href="eats.html">Eats</a><a href="gallery.html">Gallery</a></nav></div></header>
 <main>
 <div class="ev-hero"><div class="img" role="img" aria-label="Schönbrunn Palace"></div>
  <div class="checker gold" aria-hidden="true"></div>

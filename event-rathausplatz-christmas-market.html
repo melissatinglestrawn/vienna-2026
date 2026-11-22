@@ -208,8 +208,8 @@ footer .script{font-family:var(--script);font-weight:600;font-size:1.75rem;color
   /* Nav wraps instead of clipping */
   .topbar .wrap{flex-direction:column;align-items:stretch;gap:0;min-height:0;padding-top:10px;padding-bottom:2px}
   .brand{font-size:1.1rem;padding-bottom:8px;border-bottom:1px solid rgba(234,211,165,.22)}
-  .nav{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;overflow:visible;margin:4px -4px 0}
-  .nav a{padding:11px 2px;font-size:.82rem;text-align:center;min-height:44px;display:flex;align-items:center;justify-content:center}
+  .nav{display:grid;grid-template-columns:repeat(5,1fr);gap:2px;overflow:visible;margin:4px -4px 0}
+  .nav a{padding:12px 2px;font-size:.86rem;text-align:center;min-height:46px;display:flex;align-items:center;justify-content:center}
 
   /* Hero: shorter, less dead space */
   .hero .wrap{padding-top:34px;padding-bottom:30px}
@@ -274,7 +274,7 @@ footer .script{font-family:var(--script);font-weight:600;font-size:1.75rem;color
   footer .script{font-size:1.5rem}
 }
 @media (max-width:400px){
-  .nav a{font-size:.76rem;padding:11px 1px}
+  .nav a{font-size:.78rem;padding:12px 1px}
   .day-date .num{font-size:2.2rem}
 }
 
@@ -295,20 +295,50 @@ footer .script{font-family:var(--script);font-weight:600;font-size:1.75rem;color
 .mode svg{width:15px;height:15px;flex:0 0 15px;margin-top:3px}
 .aside .mode{font-size:1rem;margin:0}
 .aside .from-flat{color:var(--muted);font-size:.9rem;margin:.6em 0 0}
+
+/* ---------- Streamlining pass ---------- */
+.daybar a{font-weight:500}
+.sec-head h2{letter-spacing:-.01em}
+
+/* Days read as cards you can thumb through */
+@media (max-width:860px){
+  .day{border-top:0;padding:0 0 18px;scroll-margin-top:calc(var(--topbar-h,106px) + 58px)}
+  .day-body{background:#fffaf0;border:1px solid #e9dcbd;border-radius:10px;padding:16px 15px 6px;box-shadow:0 1px 3px rgba(60,30,20,.05)}
+  .day-date{padding:16px 2px 8px;align-items:center}
+  .day-date .num{font-size:2.3rem;color:var(--tanne)}
+  .day-date .wd{font-size:1.02rem;letter-spacing:.01em}
+  .day-date .mo{font-size:.9rem}
+  .day-photo{margin:0 -15px 14px;border-radius:9px 9px 0 0;aspect-ratio:2/1}
+  .day-body h3{font-size:1.42rem;margin-bottom:3px}
+  .day-body .lede{font-size:.98rem;margin-bottom:14px}
+  .stops li{padding:13px 0}
+  .stops li:last-child{border-bottom:0;padding-bottom:4px}
+  .stops .when{color:var(--wein);font-weight:600}
+  .stops a.stop,.stops .plain{font-size:1.14rem}
+  .panel{border-radius:9px}
+  .extra{border-radius:9px;overflow:hidden}
+  .notice{border-radius:0 8px 8px 0}
+  .aside .box{border-radius:9px}
+  section{padding:30px 0}
+  .hero .wrap{padding-top:28px;padding-bottom:26px}
+  .hero h1{font-size:clamp(3.4rem,19vw,5rem)}
+  .sec-head h2{font-size:1.9rem}
+  .sec-head p{font-size:1rem}
+}
 </style>
 <script>window.EVENT={"wiki": ["Vienna City Hall", "Wiener Christkindlmarkt"]}</script>
-</head><body><header class="topbar"><div class="wrap"><a class="brand" href="index.html">Wien 2026</a><nav class="nav" aria-label="Main"><a href="index.html#itinerary">Itinerary</a><a href="index.html#travel">Travel</a><a href="index.html#packing">Packing</a><a href="index.html#extras">Extras</a><a href="tickets.html">Tickets</a><a href="eats.html">Eats</a><a href="gallery.html">Gallery</a></nav></div></header>
+</head><body><header class="topbar"><div class="wrap"><a class="brand" href="index.html">Wien 2026</a><nav class="nav" aria-label="Main"><a href="index.html#itinerary">Itinerary</a><a href="travel.html">Before</a><a href="tickets.html">Tickets</a><a href="eats.html">Eats</a><a href="gallery.html">Gallery</a></nav></div></header>
 <main>
 <div class="ev-hero"><div class="img" role="img" aria-label="Rathausplatz Christmas Market"></div>
  <div class="checker gold" aria-hidden="true"></div>
  <div class="wrap"><div class="crumb"><a href="index.html#day-thu">Back to Thursday, Nov 26</a></div>
- <h1>Rathausplatz Christmas Market</h1><div class="when">Thu, Nov 26, Late afternoon</div><p style="max-width:60ch;margin:10px 0 0">Vienna&#x27;s flagship Christkindlmarkt in front of the floodlit City Hall.</p>
+ <h1>Rathausplatz Christmas Market</h1><div class="when">Thu, Nov 26, 4:30 PM</div><p style="max-width:60ch;margin:10px 0 0">Vienna&#x27;s flagship Christkindlmarkt in front of the floodlit City Hall.</p>
  <div class="actions"><a class="btn btn-gold" href="https://www.visitingvienna.com/sights/christmasmarkets/rathausplatz/" target="_blank" rel="noopener">Market hours &amp; details</a><a class="btn btn-line" href="https://www.christkindlmarkt.at/" target="_blank" rel="noopener">Official market site</a></div></div></div>
 <div class="wrap">
  <div class="ev-layout">
   <article class="story"><h2>The story</h2><p>The market spreads across the square in front of the Rathaus, Vienna&#x27;s neo-Gothic City Hall, built between 1872 and 1883 to a design by Friedrich von Schmidt. In Advent the park trees are hung with lights and ornaments.</p><h3>An old tradition</h3><p>Vienna&#x27;s Christmas markets trace their roots to a December market that Duke Albrecht I allowed the city to hold in 1298. Over the centuries the &quot;Krippenmarkt&quot; and &quot;Thomasmarkt&quot; moved around the city before settling here.</p></article>
   <aside class="aside">
-   <div class="box"><h2>Getting there</h2><p class="mode big-mode"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="1" y="1" width="14" height="14" rx="3.5" fill="currentColor"/><path d="M5.2 4.3v4.4a2.8 2.8 0 0 0 5.6 0V4.3" stroke="#F7EFE0" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>U3 to Volkstheater, then a 7 minute walk, about 20 minutes</p><p class="from-flat">From the apartment on Louise-Martini-Weg. Kardinal-Nagl-Platz (U3) is about 6 minutes on foot.</p><p style="margin-top:10px"><a href="https://www.google.com/maps/dir/?api=1&amp;origin=Louise-Martini-Weg%208%2C%201030%20Wien%2C%20Austria&amp;destination=Rathausplatz%2C%201010%20Wien&amp;travelmode=transit" target="_blank" rel="noopener">Open transit directions</a></p></div><div class="box"><h2>Good to know</h2><ul><li>Open daily Nov 13 to Dec 26, 2026, from 10 AM to 10 PM. Free entry.</li><li>Your first mug of Punsch or Glühwein includes a deposit. Return the mug for cash back, or keep it as a souvenir.</li><li>It gets busy after dark on weekends. A Thursday is a good choice.</li><li>5 minutes on foot to dinner at Centimeter, and 5 more to Palais Auersperg for the concert.</li></ul></div>
+   <div class="box"><h2>Getting there</h2><p class="mode big-mode"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="1" y="1" width="14" height="14" rx="3.5" fill="currentColor"/><path d="M5.2 4.3v4.4a2.8 2.8 0 0 0 5.6 0V4.3" stroke="#F7EFE0" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>U3 to Volkstheater, then a 7 minute walk, about 20 minutes</p><p class="from-flat">From the apartment on Louise-Martini-Weg. Kardinal-Nagl-Platz (U3) is about 6 minutes on foot.</p><p style="margin-top:10px"><a href="https://www.google.com/maps/dir/?api=1&amp;origin=Louise-Martini-Weg%208%2C%201030%20Wien%2C%20Austria&amp;destination=Rathausplatz%2C%201010%20Wien&amp;travelmode=transit" target="_blank" rel="noopener">Open transit directions</a></p></div><div class="box"><h2>Good to know</h2><ul><li>Open daily Nov 13 to Dec 26, 2026, from 10 AM to 10 PM. Free entry.</li><li>Your first mug of Punsch or Glühwein includes a deposit. Return the mug for cash back, or keep it as a souvenir.</li><li>It gets busy after dark on weekends. A Thursday is a good choice.</li><li>5 minutes on foot to dinner at Centimeter, booked for 5:45, and 5 more to Palais Auersperg for the 8:00 concert.</li></ul></div>
    <div class="box"><h2>Tickets & links</h2><ul class="linklist"><li><a href="https://www.visitingvienna.com/sights/christmasmarkets/rathausplatz/" target="_blank" rel="noopener">Market hours &amp; details</a></li><li><a href="https://www.christkindlmarkt.at/" target="_blank" rel="noopener">Official market site</a></li></ul></div>
    <div class="box"><h2>Read more</h2><ul class="linklist"><li><a href="https://en.wikipedia.org/wiki/Vienna_City_Hall" target="_blank" rel="noopener">Wikipedia: Vienna City Hall</a></li><li><a href="https://www.wien.info/en/now-on/christmas/christmas-markets-342664" target="_blank" rel="noopener">Vienna Tourist Board: Christmas markets</a></li></ul></div>
   </aside>

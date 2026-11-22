@@ -208,8 +208,8 @@ footer .script{font-family:var(--script);font-weight:600;font-size:1.75rem;color
   /* Nav wraps instead of clipping */
   .topbar .wrap{flex-direction:column;align-items:stretch;gap:0;min-height:0;padding-top:10px;padding-bottom:2px}
   .brand{font-size:1.1rem;padding-bottom:8px;border-bottom:1px solid rgba(234,211,165,.22)}
-  .nav{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;overflow:visible;margin:4px -4px 0}
-  .nav a{padding:11px 2px;font-size:.82rem;text-align:center;min-height:44px;display:flex;align-items:center;justify-content:center}
+  .nav{display:grid;grid-template-columns:repeat(5,1fr);gap:2px;overflow:visible;margin:4px -4px 0}
+  .nav a{padding:12px 2px;font-size:.86rem;text-align:center;min-height:46px;display:flex;align-items:center;justify-content:center}
 
   /* Hero: shorter, less dead space */
   .hero .wrap{padding-top:34px;padding-bottom:30px}
@@ -274,7 +274,7 @@ footer .script{font-family:var(--script);font-weight:600;font-size:1.75rem;color
   footer .script{font-size:1.5rem}
 }
 @media (max-width:400px){
-  .nav a{font-size:.76rem;padding:11px 1px}
+  .nav a{font-size:.78rem;padding:12px 1px}
   .day-date .num{font-size:2.2rem}
 }
 
@@ -295,8 +295,38 @@ footer .script{font-family:var(--script);font-weight:600;font-size:1.75rem;color
 .mode svg{width:15px;height:15px;flex:0 0 15px;margin-top:3px}
 .aside .mode{font-size:1rem;margin:0}
 .aside .from-flat{color:var(--muted);font-size:.9rem;margin:.6em 0 0}
+
+/* ---------- Streamlining pass ---------- */
+.daybar a{font-weight:500}
+.sec-head h2{letter-spacing:-.01em}
+
+/* Days read as cards you can thumb through */
+@media (max-width:860px){
+  .day{border-top:0;padding:0 0 18px;scroll-margin-top:calc(var(--topbar-h,106px) + 58px)}
+  .day-body{background:#fffaf0;border:1px solid #e9dcbd;border-radius:10px;padding:16px 15px 6px;box-shadow:0 1px 3px rgba(60,30,20,.05)}
+  .day-date{padding:16px 2px 8px;align-items:center}
+  .day-date .num{font-size:2.3rem;color:var(--tanne)}
+  .day-date .wd{font-size:1.02rem;letter-spacing:.01em}
+  .day-date .mo{font-size:.9rem}
+  .day-photo{margin:0 -15px 14px;border-radius:9px 9px 0 0;aspect-ratio:2/1}
+  .day-body h3{font-size:1.42rem;margin-bottom:3px}
+  .day-body .lede{font-size:.98rem;margin-bottom:14px}
+  .stops li{padding:13px 0}
+  .stops li:last-child{border-bottom:0;padding-bottom:4px}
+  .stops .when{color:var(--wein);font-weight:600}
+  .stops a.stop,.stops .plain{font-size:1.14rem}
+  .panel{border-radius:9px}
+  .extra{border-radius:9px;overflow:hidden}
+  .notice{border-radius:0 8px 8px 0}
+  .aside .box{border-radius:9px}
+  section{padding:30px 0}
+  .hero .wrap{padding-top:28px;padding-bottom:26px}
+  .hero h1{font-size:clamp(3.4rem,19vw,5rem)}
+  .sec-head h2{font-size:1.9rem}
+  .sec-head p{font-size:1rem}
+}
 </style>
-</head><body><header class="topbar"><div class="wrap"><a class="brand" href="index.html">Wien 2026</a><nav class="nav" aria-label="Main"><a href="index.html#itinerary">Itinerary</a><a href="index.html#travel">Travel</a><a href="index.html#packing">Packing</a><a href="index.html#extras">Extras</a><a href="tickets.html">Tickets</a><a href="eats.html">Eats</a><a href="gallery.html">Gallery</a></nav></div></header>
+</head><body><header class="topbar"><div class="wrap"><a class="brand" href="index.html">Wien 2026</a><nav class="nav" aria-label="Main"><a href="index.html#itinerary">Itinerary</a><a href="travel.html">Before</a><a href="tickets.html">Tickets</a><a href="eats.html">Eats</a><a href="gallery.html">Gallery</a></nav></div></header>
 <script>(function(){var t=document.querySelector(".topbar");if(!t)return;function set(){document.documentElement.style.setProperty("--topbar-h",t.offsetHeight+"px")}set();addEventListener("resize",set);addEventListener("orientationchange",set);if(document.fonts&&document.fonts.ready)document.fonts.ready.then(set);})();</script><main>
 <section class="hero" style="padding:0"><div class="hero-img" data-wiki="St. Stephen's Cathedral, Vienna"></div>
  <div class="wrap">
@@ -304,12 +334,12 @@ footer .script{font-family:var(--script);font-weight:600;font-size:1.75rem;color
   <p class="script">a Christmas getaway</p>
   <p class="dates">November 23 to 29, 2026. Four couples, one apartment, five full days of palaces, Christmas markets, Klimt and a concert in a palace ballroom.</p>
   <div class="countdown" id="countdown" aria-live="polite"></div>
-  <div class="hero-links"><a class="btn btn-gold" href="#itinerary">See the itinerary</a><a class="btn btn-line" href="gallery.html">Share photos</a></div>
+  <div class="hero-links"><a class="btn btn-gold" href="#itinerary">See the week</a><a class="btn btn-line" href="tickets.html">Tickets</a></div>
  </div></section>
 <div class="checker gold" aria-hidden="true"></div>
 
 <nav class="daybar" aria-label="Jump to a day"><div class="wrap"><a href="#itinerary">Week</a><a href="#day-tue">Tue 24</a><a href="#day-wed">Wed 25</a><a href="#day-thu">Thu 26</a><a href="#day-fri">Fri 27</a><a href="#day-sat">Sat 28</a><a href="#day-sun">Sun 29</a></div></nav><section id="itinerary"><div class="wrap">
- <div class="sec-head"><h2>The week, day by day</h2><p>Tap any stop for tickets, photos and the story behind it. Every city stop is 15 to 30 minutes from the apartment on foot or by U-Bahn and tram. Only the Bratislava day leaves Vienna.</p> <p style="margin-top:10px"><a href="tickets.html">All tickets and bookings in one place</a></p><p style="margin-top:10px"><a href="eats.html">Cheap eats near each day's stops</a></p></div>
+ <div class="sec-head"><h2>The week, day by day</h2><p>Tap any stop for tickets, photos, the story behind it and how to get there.</p> </div>
  <article class="day" id="day-mon">
   <div class="day-date"><div class="wd">Monday</div><div class="num">23</div><div class="mo">November</div></div>
   <div class="day-body"><h3>Atlanta to Vienna</h3><p class="lede">Travel day. The adventure begins.</p>
@@ -326,7 +356,7 @@ footer .script{font-family:var(--script);font-weight:600;font-size:1.75rem;color
   <div class="day-date"><div class="wd">Thursday</div><div class="num">26</div><div class="mo">November</div></div>
   <div class="day-body"><h3>Imperial Vienna</h3><p class="lede">Schönbrunn by day, the big market at dusk, then Mozart in a palace ballroom.</p>
   <div class="day-photo" data-wiki="Schönbrunn Palace" role="img" aria-label="Imperial Vienna"></div>
-  <ol class="stops"><li><span class="when">Morning</span><div><a class="stop" href="event-schonbrunn-palace.html">Schönbrunn Palace</a><span class="pill free">Booked</span><span class="note">The Habsburg summer palace with 1,441 rooms. Timed entry required.</span><span class="mode"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="1" y="1" width="14" height="14" rx="3.5" fill="currentColor"/><path d="M5.2 4.3v4.4a2.8 2.8 0 0 0 5.6 0V4.3" stroke="#F7EFE0" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>U3 one stop to Landstraße, then U4 to Schönbrunn, about 30 minutes</span></div></li><li><span class="when">Late morning</span><div><a class="stop" href="event-gloriette-gardens.html">Palace Gardens &amp; Gloriette</a><span class="note">Weather permitting. A climb to the hilltop colonnade for the best view over the palace and city.</span><span class="mode"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="9" cy="2.6" r="1.7" fill="currentColor"/><path d="M9 5.4 6.6 7.2v3M9 5.4l2.3 1.9.9 2.4M8.3 9.6l2 1.5.5 3.4M8.3 9.6 5.5 11.2l-.7 3.3" stroke="currentColor" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>15 to 20 minute walk up through the gardens</span></div></li><li><span class="when">Afternoon</span><div><a class="stop" href="event-schonbrunn-christmas-market.html">Schönbrunn Christmas Market</a><span class="note">Artisan huts in the palace forecourt, often the locals&#x27; favorite market.</span><span class="mode"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="9" cy="2.6" r="1.7" fill="currentColor"/><path d="M9 5.4 6.6 7.2v3M9 5.4l2.3 1.9.9 2.4M8.3 9.6l2 1.5.5 3.4M8.3 9.6 5.5 11.2l-.7 3.3" stroke="currentColor" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>In the palace forecourt, a few minutes on foot</span></div></li><li><span class="when">Late afternoon</span><div><a class="stop" href="event-rathausplatz-christmas-market.html">Rathausplatz Christmas Market</a><span class="note">Vienna&#x27;s flagship market, floodlit City Hall, and a 5 minute walk to dinner and the concert.</span><span class="mode"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="1" y="1" width="14" height="14" rx="3.5" fill="currentColor"/><path d="M5.2 4.3v4.4a2.8 2.8 0 0 0 5.6 0V4.3" stroke="#F7EFE0" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>U3 to Volkstheater, then a 7 minute walk, about 20 minutes</span></div></li><li><span class="when">Early dinner</span><div><a class="stop" href="event-centimeter.html">Centimeter beim Rathaus</a><span class="pill">Reserve</span><span class="note">Cheap, enormous portions, open from 10 AM. Sit by 5:30 and there is no rush.</span><span class="mode"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="9" cy="2.6" r="1.7" fill="currentColor"/><path d="M9 5.4 6.6 7.2v3M9 5.4l2.3 1.9.9 2.4M8.3 9.6l2 1.5.5 3.4M8.3 9.6 5.5 11.2l-.7 3.3" stroke="currentColor" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>4 minute walk to Palais Auersperg</span></div></li><li><span class="when">8:00 PM</span><div><a class="stop" href="event-imperial-gala-concert.html">Imperial Gala Concert</a><span class="pill free">Booked</span><span class="note">Mozart and Strauss at Palais Auersperg, with sopranos and the Vienna Royal Ballet. About 90 minutes. Booking link on the page.</span><span class="mode"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="1" y="1" width="14" height="14" rx="3.5" fill="currentColor"/><path d="M5.2 4.3v4.4a2.8 2.8 0 0 0 5.6 0V4.3" stroke="#F7EFE0" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>U3 to Volkstheater, then about an 8 minute walk, about 25 minutes</span></div></li></ol></div></article><article class="day" id="day-fri">
+  <ol class="stops"><li><span class="when">Morning</span><div><a class="stop" href="event-schonbrunn-palace.html">Schönbrunn Palace</a><span class="pill free">Booked</span><span class="note">The Habsburg summer palace with 1,441 rooms. Timed entry required.</span><span class="mode"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="1" y="1" width="14" height="14" rx="3.5" fill="currentColor"/><path d="M5.2 4.3v4.4a2.8 2.8 0 0 0 5.6 0V4.3" stroke="#F7EFE0" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>U3 one stop to Landstraße, then U4 to Schönbrunn, about 30 minutes</span></div></li><li><span class="when">Late morning</span><div><a class="stop" href="event-gloriette-gardens.html">Palace Gardens &amp; Gloriette</a><span class="note">Weather permitting. A climb to the hilltop colonnade for the best view over the palace and city.</span><span class="mode"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="9" cy="2.6" r="1.7" fill="currentColor"/><path d="M9 5.4 6.6 7.2v3M9 5.4l2.3 1.9.9 2.4M8.3 9.6l2 1.5.5 3.4M8.3 9.6 5.5 11.2l-.7 3.3" stroke="currentColor" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>15 to 20 minute walk up through the gardens</span></div></li><li><span class="when">Afternoon</span><div><a class="stop" href="event-schonbrunn-christmas-market.html">Schönbrunn Christmas Market</a><span class="note">Artisan huts in the palace forecourt, often the locals&#x27; favorite market.</span><span class="mode"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="9" cy="2.6" r="1.7" fill="currentColor"/><path d="M9 5.4 6.6 7.2v3M9 5.4l2.3 1.9.9 2.4M8.3 9.6l2 1.5.5 3.4M8.3 9.6 5.5 11.2l-.7 3.3" stroke="currentColor" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>In the palace forecourt, a few minutes on foot</span></div></li><li><span class="when">4:30 PM</span><div><a class="stop" href="event-rathausplatz-christmas-market.html">Rathausplatz Christmas Market</a><span class="note">Vienna&#x27;s flagship market, floodlit City Hall, and a 5 minute walk to dinner and the concert.</span><span class="mode"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="1" y="1" width="14" height="14" rx="3.5" fill="currentColor"/><path d="M5.2 4.3v4.4a2.8 2.8 0 0 0 5.6 0V4.3" stroke="#F7EFE0" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>U3 to Volkstheater, then a 7 minute walk, about 20 minutes</span></div></li><li><span class="when">5:45 PM</span><div><a class="stop" href="event-centimeter.html">Centimeter beim Rathaus</a><span class="pill free">Booked</span><span class="note">Table for 8 at 5:45. Cheap and enormous, and 4 minutes from the concert, so no rush before 8:00.</span><span class="mode"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="9" cy="2.6" r="1.7" fill="currentColor"/><path d="M9 5.4 6.6 7.2v3M9 5.4l2.3 1.9.9 2.4M8.3 9.6l2 1.5.5 3.4M8.3 9.6 5.5 11.2l-.7 3.3" stroke="currentColor" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>4 minute walk to Palais Auersperg</span></div></li><li><span class="when">8:00 PM</span><div><a class="stop" href="event-imperial-gala-concert.html">Imperial Gala Concert</a><span class="pill free">Booked</span><span class="note">Mozart and Strauss at Palais Auersperg, with sopranos and the Vienna Royal Ballet. About 90 minutes. Booking link on the page.</span><span class="mode"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="1" y="1" width="14" height="14" rx="3.5" fill="currentColor"/><path d="M5.2 4.3v4.4a2.8 2.8 0 0 0 5.6 0V4.3" stroke="#F7EFE0" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>U3 to Volkstheater, then about an 8 minute walk, about 25 minutes</span></div></li></ol></div></article><article class="day" id="day-fri">
   <div class="day-date"><div class="wd">Friday</div><div class="num">27</div><div class="mo">November</div></div>
   <div class="day-body"><h3>Slovakia for the Day</h3><p class="lede">A full day across the border: Bratislava, three castles and the Little Carpathians.</p>
   <div class="day-photo" data-wiki="Devín Castle" role="img" aria-label="Slovakia for the Day"></div>
@@ -339,66 +369,6 @@ footer .script{font-family:var(--script);font-weight:600;font-size:1.75rem;color
   <div class="day-body"><h3>Auf Wiedersehen</h3><p class="lede">Simple and flexible around flight times. Early departures leave before breakfast.</p>
   <div class="day-photo" data-wiki="Karlskirche" role="img" aria-label="Auf Wiedersehen"></div>
   <ol class="stops"><li><span class="when">Morning</span><div><span class="plain">Leisurely breakfast</span><span class="note">If flight time allows.</span></div></li><li><span class="when">Morning</span><div><span class="plain">Last minute shopping</span><span class="note">Chocolates, ornaments or Austrian coffee. Fragile finds go in your carry-on.</span></div></li><li><span class="when">Midday</span><div><a class="stop" href="#travel">Transfer to the airport</a><span class="note">ATAV van collects us around 5:15 AM for the 8:00 AM flight. No attraction tickets needed today.</span></div></li></ol></div></article>
-</div></section>
-
-<div class="checker" aria-hidden="true"></div>
-<section id="travel" class="dark"><div class="wrap">
- <div class="sec-head"><h2>Getting there &amp; staying</h2><p>These are our United flights through Frankfurt. Add yours here once you book.</p></div>
- <div class="grid3">
-  <div class="panel"><h3>Out: Mon, Nov 23</h3><div class="big">ATL 4:30 PM</div><p class="fine">to Vienna 9:45 AM on Tue, Nov 24. 11h 15m, 1 stop, Basic Economy.</p>
-   <p style="margin-top:14px"><strong>UA 8830</strong>, ATL to FRA<br>4:30 PM to 7:15 AM, A330-300, operated by Lufthansa<br><span class="fine">Seats 23H and 23K</span></p>
-   <p class="fine">1h 5m connection in Frankfurt</p>
-   <p><strong>UA 9854</strong>, FRA to VIE<br>8:20 AM to 9:45 AM, A320, operated by Austrian<br><span class="fine">Seats 20D and 20C</span></p>
-   <a class="btn btn-gold" href="https://www.united.com/en/us" target="_blank" rel="noopener">Manage on United</a></div>
-  <div class="panel"><h3>Home: Sun, Nov 29</h3><div class="big">VIE 8:00 AM</div><p class="fine">to Atlanta 2:40 PM the same day. 12h 40m, 1 stop.</p>
-   <p style="margin-top:14px"><strong>UA 9857</strong>, VIE to FRA<br>8:00 AM to 9:30 AM, A320, operated by Austrian<br><span class="fine">Seats 16D and 16C</span></p>
-   <p class="fine">1h connection in Frankfurt</p>
-   <p><strong>UA 8831</strong>, FRA to ATL<br>10:30 AM to 2:40 PM, A330-300, operated by Lufthansa<br><span class="fine">Seats 22D and 22E</span></p>
-   <p class="fine">An 8:00 AM flight means leaving the apartment around 5:30 AM.</p></div>
-  <div class="panel"><h3>Our apartment</h3><p>Louise-Martini-Weg 8, 1030 Vienna</p><p class="fine">Entire apartment for 4 couples, walkable to the center and transit</p>
-   <div class="big">$744.45</div><p class="fine">Per couple ($2,977.79 total stay)</p>
-   <a class="btn btn-gold" href="https://www.airbnb.com/rooms/28901771" target="_blank" rel="noopener">View the Airbnb</a></div>
- </div>
- <div class="grid3" style="margin-top:22px">
-  <div class="panel"><h3>What the flights cost</h3>
-   <p>Fare, 2 travelers: $1,924.00<br><span class="fine">$962.00 per person</span></p>
-   <p>Seats: $503.16<br>Taxes and fees: $409.46</p>
-   <div class="big">$2,836.62</div><p class="fine">$1,418.31 per person. Basic Economy, so check bag rules before you pack.</p></div>
-  <div class="panel" style="border-color:var(--gold);background:rgba(234,211,165,.12)"><h3>Airport transfer, booked</h3><p>A Business Van from Airport Transfer Vienna (ATAV) carries all 8 of us both ways, so no trains or taxi queues with luggage.</p>
-   <p><strong>Arrival, Tue 24 Nov, pickup 11:45</strong><br>Vienna Airport to Bui Vien, H&ouml;rnesgasse 17, 1030 Wien, where we eat and leave the bags. About 19 minutes.</p><p class="fine">We collect the luggage ourselves at 6:30 PM and walk the 360 metres to the apartment. No second van needed.</p>
-   <p><strong>Return, Sun 29 Nov</strong><br>Collected at the apartment for the 8:00 AM flight.</p>
-   <p class="fine">Meet and greet is included. Turn your phone on as soon as we land. The driver calls and tells us where to meet in the arrivals hall.</p>
-   <p class="fine">ATAV is reachable 24/7 on +43 676 770 4159, by phone or WhatsApp. Free cancellation up to 24 hours before pickup.</p>
-   <div class="big">$25</div><p class="fine">Per person, round trip, about $200 for all 8. The arrival leg is &euro;90 including meet and greet.</p></div>
-  <div class="panel"><h3>Peachy Parking at ATL</h3><p>Peachy Parking, Indoor International, is booked for 2 cars.</p>
-   <p><strong>Car 1:</strong> Michelle and Gavin ride with Melissa and Charles.<br><strong>Car 2:</strong> Connie and Ron ride with Kristin and Clay.</p>
-   <p class="fine">Both cars park together. Check passports are valid well beyond the trip dates, and keep essentials in your carry on.</p></div>
- </div>
- <div class="grid3" style="margin-top:22px">
-  <div class="panel"><h3>Getting around Vienna</h3>
-   <p>One pass covers the U-Bahn, trams, buses and S-Bahn inside the city. We ride several times a day, so a pass beats single tickets at about 3.20 euro a ride.</p>
-   <p class="fine">The 7 day Vienna ticket runs about 28.90 euro and covers our whole stay. The 72 hour ticket is the other option. Buy online, in the WienMobil app, or at any station machine.</p>
-   <a class="btn btn-gold" href="https://www.wienerlinien.at/web/wl-en/travel-cards" target="_blank" rel="noopener">Buy a Wiener Linien pass</a><p class="fine" style="margin-top:12px"><a href="https://www.wienerlinien.at/web/wl-en/network-maps" target="_blank" rel="noopener">U-Bahn and network maps</a><br><a href="https://apps.apple.com/app/id1107918142" target="_blank" rel="noopener">WienMobil app, iPhone</a><br><a href="https://play.google.com/store/search?q=WienMobil%20Wiener%20Linien&amp;c=apps" target="_blank" rel="noopener">WienMobil app, Android</a></p>
-   <p class="fine" style="margin-top:12px">Validate a paper ticket once before your first ride. City passes do not cover the airport run, so buy a separate ticket for that.</p></div>
-  <div class="panel"><h3>Still to book</h3><ul style="margin:0;padding-left:18px"><li><a href="event-centimeter.html">Centimeter beim Rathaus</a></li><li><a href="event-hofburg.html">Hofburg Imperial Apartments</a></li><li><a href="event-motto-am-fluss.html">Motto am Fluss</a></li></ul></div>
-  <div class="panel"><h3>Sunday morning</h3><p>The ATAV van collects us at the apartment for the 8:00 AM flight, so be downstairs with bags before it arrives. Expect roughly 5:15 AM.</p>
-   <p class="fine">Backup if anything goes wrong: Rennweg station is a 15 minute walk and the S7 runs from there to the airport in about 20 minutes.</p></div>
- </div>
-</div></section>
-
-<section id="packing"><div class="wrap">
- <div class="sec-head"><h2>Weather & what to wear</h2><p>Typical late November in Vienna: cold mornings, crisp days and early sunsets.</p></div>
- <div class="weather">
-  <div><div class="stat">41 to 47°F</div><div class="stat-label">Typical highs (5 to 8°C)</div>
-   <div class="stat">30 to 36°F</div><div class="stat-label">Typical lows (about -1 to 2°C)</div>
-   <div class="stat">4:00 PM</div><div class="stat-label">Approximate sunset. Plan outdoor sights early.</div></div>
-  <div><h3>For everyone</h3><ul class="checklist">
-   <li>Warm coat, wool or down</li><li>Sweaters and long sleeves for layering</li><li>Waterproof walking shoes or boots for cobblestones</li>
-   <li>Scarf, gloves and a hat</li><li>Compact umbrella and a day bag</li></ul></div>
-  <div><h3>For the evenings</h3><ul class="checklist">
-   <li>A dressier outfit for the concert and farewell dinner</li><li>Jacket or blazer, optional</li><li>Layers you can shed. Museums, restaurants and trains are warm inside</li>
-   <li>A warm layer for the Seegrotte and the cathedral</li><li>Space in your carry-on for fragile market finds</li></ul></div>
- </div>
 </div></section>
 
 <div class="checker" aria-hidden="true"></div>
